@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://ds0sjluox6u5i"]
 
+[ext_resource type="Script" uid="uid://cixqwbax6y80e" path="res://scripts/pictureframe.gd" id="2_0grwd"]
 [ext_resource type="Texture2D" uid="uid://kyrt3vmri6ue" path="res://assets/background/bedroom_2 (1).png" id="2_kpde0"]
+[ext_resource type="Texture2D" uid="uid://c4g2gw7r1k1dw" path="res://assets/background/Award frame inspection.png" id="3_mkmp1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
 size = Vector2(247.5, 155)
@@ -41,9 +43,13 @@ size = Vector2(83, 70.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ynku"]
 size = Vector2(671.5545, 112.49271)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6kv6x"]
+size = Vector2(109, 503.5)
+
 [node name="Bedroom" type="Node2D" unique_id=274227017]
 
 [node name="invisiblewall" type="StaticBody2D" parent="." unique_id=9043200]
+visible = false
 position = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisiblewall" unique_id=844070224]
@@ -115,3 +121,47 @@ offset_top = -459.0
 offset_right = 1614.0
 offset_bottom = 1049.0
 texture = ExtResource("2_kpde0")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=536044961]
+script = ExtResource("2_0grwd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=239164529]
+position = Vector2(19.375006, 149.75)
+scale = Vector2(0.049747463, 0.068124965)
+texture = ExtResource("3_mkmp1")
+region_enabled = true
+region_rect = Rect2(460, 120, 990, 800)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=580684768]
+position = Vector2(19.5, 237.75)
+shape = SubResource("RectangleShape2D_6kv6x")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Area2D" unique_id=1925899357]
+
+[node name="Control" type="Control" parent="Area2D/CanvasLayer" unique_id=858362271]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -18.0
+offset_top = -39.0
+offset_right = 10.0
+offset_bottom = 13.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Area2D/CanvasLayer/Control" unique_id=1346955166]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mkmp1")
+expand_mode = 1
+stretch_mode = 5

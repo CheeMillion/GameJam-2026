@@ -33,9 +33,9 @@ func _ready() -> void:
 	camera.limit_bottom = 10000000
 
 func _physics_process(_delta: float) -> void:
-	var holding_v := Input.is_key_pressed(KEY_V)
-	if holding_v != birds_eye:
-		birds_eye = holding_v
+	var holding_space := Input.is_key_pressed(KEY_SPACE)
+	if holding_space != birds_eye:
+		birds_eye = holding_space
 		set_birds_eye_zoom(birds_eye)
 
 	if birds_eye:
