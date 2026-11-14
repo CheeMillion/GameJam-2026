@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ktjk67kl70x8" path="res://assets/object item sprites/dining_room_chair.png" id="2_dytne"]
 [ext_resource type="Texture2D" uid="uid://ce3n6bn8d2vnj" path="res://assets/object item sprites/dining_room_chair 3.png" id="3_cli76"]
 [ext_resource type="Texture2D" uid="uid://dq8jqenon8t0q" path="res://assets/object item sprites/dining_room_chair 2.png" id="4_o5vmx"]
+[ext_resource type="Texture2D" uid="uid://u2dpts4g77hq" path="res://assets/object item sprites/bowl dining room.png" id="6_o5vmx"]
+[ext_resource type="Texture2D" uid="uid://be56svx2uu5um" path="res://assets/object item sprites/plate dining room.png" id="7_r37lo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
 size = Vector2(214, 473.5)
@@ -139,3 +141,27 @@ texture = ExtResource("2_30llk")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParallaxBackground2/StaticBody2D" unique_id=6629917]
 polygon = PackedVector2Array(4854, 516, 4854, 615, 4923, 617, 4945, 651, 5084, 651, 5101, 620, 5178, 623, 5174, 563, 5169, 468, 5158, 471, 5154, 520, 5119, 515, 5108, 490, 5092, 473, 5067, 451, 5046, 441, 5051, 357, 5011, 359, 4975, 353, 4974, 440, 4932, 460, 4913, 484, 4903, 510, 4869, 508, 4870, 464, 4858, 464)
+
+[node name="bowl" type="Sprite2D" parent="." unique_id=1729003339]
+visible = false
+position = Vector2(5008.9995, 507)
+scale = Vector2(2.5039976, 2.529246)
+texture = ExtResource("6_o5vmx")
+
+[node name="foodmc" type="Sprite2D" parent="." unique_id=968983141]
+visible = false
+position = Vector2(4949.0005, 521)
+scale = Vector2(1.0714262, 0.6882023)
+texture = ExtResource("7_r37lo")
+
+[node name="foodpp" type="Sprite2D" parent="." unique_id=2067329809]
+visible = false
+position = Vector2(5077.9995, 524)
+scale = Vector2(0.97619045, 0.71348315)
+texture = ExtResource("7_r37lo")
+
+[node name="foodmm" type="Sprite2D" parent="." unique_id=52661308]
+visible = false
+position = Vector2(5010, 456.5)
+scale = Vector2(1, 0.685393)
+texture = ExtResource("7_r37lo")
