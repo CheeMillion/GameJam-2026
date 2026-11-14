@@ -142,22 +142,26 @@ texture = ExtResource("2_30llk")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParallaxBackground2/StaticBody2D" unique_id=6629917]
 polygon = PackedVector2Array(4854, 516, 4854, 615, 4923, 617, 4945, 651, 5084, 651, 5101, 620, 5178, 623, 5174, 563, 5169, 468, 5158, 471, 5154, 520, 5119, 515, 5108, 490, 5092, 473, 5067, 451, 5046, 441, 5051, 357, 5011, 359, 4975, 353, 4974, 440, 4932, 460, 4913, 484, 4903, 510, 4869, 508, 4870, 464, 4858, 464)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1729003339]
+[node name="bowl" type="Sprite2D" parent="." unique_id=1729003339]
+visible = false
 position = Vector2(5008.9995, 507)
 scale = Vector2(2.5039976, 2.529246)
 texture = ExtResource("6_o5vmx")
 
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=968983141]
+[node name="foodmc" type="Sprite2D" parent="." unique_id=968983141]
+visible = false
 position = Vector2(4949.0005, 521)
 scale = Vector2(1.0714262, 0.6882023)
 texture = ExtResource("7_r37lo")
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=2067329809]
+[node name="foodpp" type="Sprite2D" parent="." unique_id=2067329809]
+visible = false
 position = Vector2(5077.9995, 524)
 scale = Vector2(0.97619045, 0.71348315)
 texture = ExtResource("7_r37lo")
 
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=52661308]
+[node name="foodmm" type="Sprite2D" parent="." unique_id=52661308]
+visible = false
 position = Vector2(5010, 456.5)
 scale = Vector2(1, 0.685393)
 texture = ExtResource("7_r37lo")

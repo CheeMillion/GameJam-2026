@@ -1,5 +1,7 @@
 extends CanvasLayer
 
+class_name FadeManager
+
 var rect: ColorRect
 
 func _ready() -> void:

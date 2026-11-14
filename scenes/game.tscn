@@ -10,8 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://3bt8et0p56ro" path="res://scenes/outside.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" path="res://scenes/phone_ui.tscn" id="8_phone_ui"]
 [ext_resource type="PackedScene" uid="uid://dlq3umbm7ih5f" path="res://scenes/pause_menu.tscn" id="9_pause_menu"]
-[ext_resource type="PackedScene" path="res://scenes/mission_log.tscn" id="10_mission_log"]
-[ext_resource type="PackedScene" path="res://scenes/interaction_prompt.tscn" id="11_interaction_prompt"]
+[ext_resource type="PackedScene" uid="uid://cexx2dprgn5a2" path="res://scenes/mission_log.tscn" id="10_mission_log"]
+[ext_resource type="PackedScene" uid="uid://bpycpc6fcks" path="res://scenes/interaction_prompt.tscn" id="11_interaction_prompt"]
 
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
@@ -21,9 +21,9 @@ visible = false
 
 [node name="PauseMenu" parent="." unique_id=1370982993 instance=ExtResource("9_pause_menu")]
 
-[node name="MissionLog" parent="." instance=ExtResource("10_mission_log")]
+[node name="MissionLog" parent="." unique_id=167470960 instance=ExtResource("10_mission_log")]
 
-[node name="InteractionPrompt" parent="." instance=ExtResource("11_interaction_prompt")]
+[node name="InteractionPrompt" parent="." unique_id=2102128049 instance=ExtResource("11_interaction_prompt")]
 
 [node name="Bedroom" parent="." unique_id=274227017 instance=ExtResource("1_fc0e3")]
 position = Vector2(-2, 0)
@@ -91,6 +91,9 @@ position = Vector2(3010, 1667)
 
 [node name="DestinationPoint" parent="teleporter4" index="0" unique_id=880137768]
 position = Vector2(1294, -952)
+
+[node name="door" parent="teleporter4" index="1" unique_id=1363747465]
+position = Vector2(-12, -24)
 
 [node name="teleporter5" parent="." unique_id=1614241934 instance=ExtResource("4_7jktm")]
 position = Vector2(6903.9995, 879.99994)
