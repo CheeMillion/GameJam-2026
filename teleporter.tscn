@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bnpgabsi758nh"]
+
+[ext_resource type="Script" uid="uid://pd8a261tirdh" path="res://scripts/teleporter.gd" id="1_eumkw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfkbx"]
+radius = 3.0
+height = 252.0
+
+[node name="teleporter" type="Area2D" unique_id=1620013102]
+script = ExtResource("1_eumkw")
+
+[node name="DestinationPoint" type="Marker2D" parent="." unique_id=880137768]
+position = Vector2(2, 3)
+
+[node name="door" type="CollisionShape2D" parent="." unique_id=1363747465]
+position = Vector2(0, -10)
+shape = SubResource("CapsuleShape2D_lfkbx")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

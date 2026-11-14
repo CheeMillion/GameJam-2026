@@ -83,13 +83,14 @@ script = ExtResource("1_hqtel")
 SPEED = 250.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1192288827]
-position = Vector2(493, 281)
+position = Vector2(12, -77)
 sprite_frames = SubResource("SpriteFrames_lfkbx")
 animation = &"left"
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1753766378]
+position = Vector2(-10, -13)
 position_smoothing_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=116085412]
-position = Vector2(481, 362)
+position = Vector2(2, -5)
 shape = SubResource("CapsuleShape2D_aui74")

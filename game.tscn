@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://rqd57oslyrf7"]
+
+[ext_resource type="PackedScene" uid="uid://ct2otyw3rij40" path="res://player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://c8kkvsnlhhwae" path="res://bedroom.tscn" id="1_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://drpfrlftqur4j" path="res://dining_room.tscn" id="3_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://bnpgabsi758nh" path="res://teleporter.tscn" id="4_7jktm"]
+
+[node name="Main" type="Node2D" unique_id=463607009]
+
+[node name="Bedroom" parent="." unique_id=274227017 instance=ExtResource("1_fc0e3")]
+
+[node name="player" parent="." unique_id=1908451884 instance=ExtResource("1_80nbo")]
+position = Vector2(823, 259)
+
+[node name="Dining" parent="." unique_id=74292362 instance=ExtResource("3_fc0e3")]
+
+[node name="TextureRect" parent="Dining/ParallaxBackground/ParallaxLayer" parent_id_path=PackedInt32Array(74292362, 821234591) index="0" unique_id=802410204]
+offset_left = 2254.0
+offset_top = -272.0
+offset_right = 4174.0
+offset_bottom = 808.0
+
+[node name="teleporter" parent="." unique_id=1620013102 instance=ExtResource("4_7jktm")]
+position = Vector2(-220, 403)
+
+[node name="DestinationPoint" parent="teleporter" index="0" unique_id=880137768]
+position = Vector2(3126, -177)
+
+[node name="door" parent="teleporter" index="1" unique_id=1363747465]
+position = Vector2(-11, -31)
+
+[node name="teleporter2" parent="." unique_id=548929422 instance=ExtResource("4_7jktm")]
+position = Vector2(2909, 128)
+rotation = -1.5620697
+
+[node name="DestinationPoint" parent="teleporter2" index="0" unique_id=880137768]
+position = Vector2(-309.85834, -3076.413)
+
+[node name="door" parent="teleporter2" index="1" unique_id=1363747465]
+position = Vector2(14.877258, -14.130228)
+
+[editable path="Bedroom"]
+[editable path="Dining"]
+[editable path="teleporter"]
+[editable path="teleporter2"]

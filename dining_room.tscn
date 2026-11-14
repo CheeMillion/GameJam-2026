@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://drpfrlftqur4j"]
+
+[ext_resource type="Texture2D" uid="uid://tvfjnx4n35n0" path="res://High_honor-pack/bg/dining_room_base.png" id="1_gh0mb"]
+
+[node name="Dining" type="Node2D" unique_id=74292362]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=115323749]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=821234591]
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer" unique_id=802410204]
+offset_left = -2947.0
+offset_top = -110.0
+offset_right = -1027.0
+offset_bottom = 970.0
+texture = ExtResource("1_gh0mb")
