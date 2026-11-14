@@ -49,7 +49,6 @@ size = Vector2(109, 503.5)
 [node name="Bedroom" type="Node2D" unique_id=274227017]
 
 [node name="invisiblewall" type="StaticBody2D" parent="." unique_id=9043200]
-visible = false
 position = Vector2(1, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisiblewall" unique_id=844070224]
