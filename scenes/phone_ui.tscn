@@ -1,0 +1,38 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/phone_ui.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cqa7vq35q4gbs" path="res://assets/hud sprites/renpy-phone-skin-dark-1.0/renpy-phone-skin-dark/phone_skins/dark/images/device.png" id="2_device"]
+[ext_resource type="Texture2D" uid="uid://c008oae8rbm2b" path="res://assets/hud sprites/renpy-phone-skin-dark-1.0/renpy-phone-skin-dark/phone_skins/dark/images/screen_bg.png" id="3_screen_bg"]
+
+[node name="PhoneUI" type="CanvasLayer"]
+
+[node name="Screen" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Phone" type="Control" parent="Screen"]
+offset_right = 320.0
+offset_bottom = 615.0
+
+[node name="ScreenBackground" type="TextureRect" parent="Screen/Phone"]
+offset_left = 15.0
+offset_top = 22.0
+offset_right = 305.0
+offset_bottom = 595.0
+mouse_filter = 2
+texture = ExtResource("3_screen_bg")
+expand_mode = 1
+stretch_mode = 0
+
+[node name="DeviceFrame" type="TextureRect" parent="Screen/Phone"]
+offset_right = 320.0
+offset_bottom = 615.0
+mouse_filter = 2
+texture = ExtResource("2_device")
+expand_mode = 1
+stretch_mode = 0
