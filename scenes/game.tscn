@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://rqd57oslyrf7"]
 
-[ext_resource type="PackedScene" uid="uid://ct2otyw3rij40" path="res://player.tscn" id="1_80nbo"]
-[ext_resource type="PackedScene" uid="uid://c8kkvsnlhhwae" path="res://bedroom.tscn" id="1_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://drpfrlftqur4j" path="res://dining_room.tscn" id="3_fc0e3"]
-[ext_resource type="PackedScene" uid="uid://bnpgabsi758nh" path="res://teleporter.tscn" id="4_7jktm"]
+[ext_resource type="PackedScene" uid="uid://ejobcreypdh3" path="res://scenes/player.tscn" id="1_80nbo"]
+[ext_resource type="PackedScene" uid="uid://ds0sjluox6u5i" path="res://scenes/bedroom.tscn" id="1_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://byvwjdicclcmj" path="res://scenes/dining_room.tscn" id="3_fc0e3"]
+[ext_resource type="PackedScene" uid="uid://bnpgabsi758nh" path="res://scenes/teleporter.tscn" id="4_7jktm"]
 
 [node name="Main" type="Node2D" unique_id=463607009]
 
