@@ -1,12 +1,12 @@
 extends CharacterBody2D
 
 @export var SPEED = 300.0
+@export var SPRINT_SPEED = 500.0
 var current_speed = SPEED
 var last_dir := "down"
 
-# Tweak these in the Inspector. Start near 1.0 and adjust in small steps.
-@export var right_scale := Vector2(0.91, 0.91)       # right walk
-@export var right_idle_scale := Vector2(1.0, 1.0)    # right idle
+@export var right_scale := Vector2(0.91, 0.91)
+@export var right_idle_scale := Vector2(1.0, 1.0)
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -19,7 +19,10 @@ func _physics_process(_delta: float) -> void:
 
 func process_movement() -> void:
 	var direction := Input.get_vector("left", "right", "up", "down")
+	var sprinting := Input.is_action_pressed("sprint")
+	current_speed = SPRINT_SPEED if sprinting else SPEED
 	velocity = direction * current_speed
+	animated_sprite_2d.speed_scale = 1.5 if sprinting else 1.0
 	play_animation(direction)
 
 func play_animation(dir: Vector2) -> void:
