@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://drpfrlftqur4j"]
 
 [ext_resource type="Texture2D" uid="uid://c5nb1udk03ig0" path="res://assets/background/dining_room_base.png" id="1_gh0mb"]
+[ext_resource type="Texture2D" uid="uid://cgtcxxky6rwh7" path="res://assets/object item sprites/dining_room_table.png" id="2_30llk"]
+[ext_resource type="Texture2D" uid="uid://ktjk67kl70x8" path="res://assets/object item sprites/dining_room_chair.png" id="2_dytne"]
+[ext_resource type="Texture2D" uid="uid://ce3n6bn8d2vnj" path="res://assets/object item sprites/dining_room_chair 3.png" id="3_cli76"]
+[ext_resource type="Texture2D" uid="uid://dq8jqenon8t0q" path="res://assets/object item sprites/dining_room_chair 2.png" id="4_o5vmx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
 size = Vector2(214, 473.5)
@@ -49,6 +53,7 @@ offset_bottom = 1002.0
 texture = ExtResource("1_gh0mb")
 
 [node name="Invisle wall" type="StaticBody2D" parent="." unique_id=1457260038]
+visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Invisle wall" unique_id=1445755656]
 position = Vector2(4299, 388.75)
@@ -97,3 +102,40 @@ shape = SubResource("RectangleShape2D_nyvtw")
 [node name="CollisionShape2D12" type="CollisionShape2D" parent="Invisle wall" unique_id=263542778]
 position = Vector2(4498, 97)
 shape = SubResource("RectangleShape2D_olta5")
+
+[node name="ParallaxBackground2" type="ParallaxBackground" parent="." unique_id=1850293132]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground2" unique_id=996989189]
+
+[node name="TextureRect2" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer" unique_id=675160634]
+offset_left = 4894.0
+offset_top = 320.0
+offset_right = 5129.0
+offset_bottom = 560.0
+texture = ExtResource("2_dytne")
+
+[node name="TextureRect3" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer" unique_id=601026412]
+offset_left = 5015.0
+offset_top = 428.0
+offset_right = 5250.0
+offset_bottom = 668.0
+texture = ExtResource("3_cli76")
+
+[node name="TextureRect4" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer" unique_id=1531615494]
+offset_left = 4776.0
+offset_top = 424.0
+offset_right = 5011.0
+offset_bottom = 664.0
+texture = ExtResource("4_o5vmx")
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground2/ParallaxLayer" unique_id=1096215457]
+offset_left = 4876.0
+offset_top = 424.0
+offset_right = 5143.0
+offset_bottom = 664.0
+texture = ExtResource("2_30llk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="ParallaxBackground2" unique_id=534680677]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ParallaxBackground2/StaticBody2D" unique_id=6629917]
+polygon = PackedVector2Array(4854, 516, 4854, 615, 4923, 617, 4945, 651, 5084, 651, 5101, 620, 5178, 623, 5174, 563, 5169, 468, 5158, 471, 5154, 520, 5119, 515, 5108, 490, 5092, 473, 5067, 451, 5046, 441, 5051, 357, 5011, 359, 4975, 353, 4974, 440, 4932, 460, 4913, 484, 4903, 510, 4869, 508, 4870, 464, 4858, 464)

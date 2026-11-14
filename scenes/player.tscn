@@ -154,9 +154,10 @@ position = Vector2(1, -184)
 zoom = Vector2(1.245, 1.245)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1192288827]
-position = Vector2(2, -100)
+position = Vector2(1, 8)
 sprite_frames = SubResource("SpriteFrames_lfkbx")
 animation = &"right_idle"
+offset = Vector2(0, -112.21)
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=116085412]
 shape = SubResource("CapsuleShape2D_aui74")
