@@ -7,7 +7,8 @@ func _ready() -> void:
 
 
 func _start_new_game() -> void:
-	get_tree().change_scene_to_file("res://game.tscn")
+	get_tree().change_scene_to_file("res://scenes/game.tscn")
+
 
 
 func _quit_game() -> void:
