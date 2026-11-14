@@ -52,7 +52,7 @@ position = Vector2(1010.25, 835)
 shape = SubResource("RectangleShape2D_lfkbx")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="invisiblewall" unique_id=1687147653]
-position = Vector2(1280, 131)
+position = Vector2(1259, 138)
 shape = SubResource("RectangleShape2D_aui74")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="invisiblewall" unique_id=990495797]
