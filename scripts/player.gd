@@ -2,13 +2,19 @@ extends CharacterBody2D
 
 @export var SPEED = 300.0
 @export var SPRINT_SPEED = 500.0
-@export var birds_eye_zoom := Vector2(0.45, 0.45)
-@export var zoom_duration := 4
+@export var birds_eye_zoom := Vector2(0.5, 0.5)
+@export var zoom_duration := 0.25
 var current_speed = SPEED
 var last_dir := "down"
 var birds_eye := false
 var normal_zoom := Vector2.ONE
 var zoom_tween: Tween
+
+const ROOMS := {
+	"kitchen": Rect2(4022, -67, 1478, 1026),
+	"bedroom": Rect2(273.8, 136.0, 616.1, 492.4),
+	"dining_room": Rect2(2464.1, 1251.1, 396.6, 460.9),
+}
 
 @export var right_scale := Vector2(0.91, 0.91)
 @export var right_idle_scale := Vector2(1.0, 1.0)
@@ -19,6 +25,12 @@ var zoom_tween: Tween
 func _ready() -> void:
 	add_to_group("player")
 	normal_zoom = camera.zoom
+	camera.top_level = true
+	camera.position_smoothing_enabled = false
+	camera.limit_left = -10000000
+	camera.limit_top = -10000000
+	camera.limit_right = 10000000
+	camera.limit_bottom = 10000000
 
 func _physics_process(_delta: float) -> void:
 	var holding_v := Input.is_key_pressed(KEY_V)
@@ -29,11 +41,37 @@ func _physics_process(_delta: float) -> void:
 	if birds_eye:
 		velocity = Vector2.ZERO
 		play_anim("down_idle")
-		move_and_slide()
-		return
+	else:
+		process_movement()
 
-	process_movement()
 	move_and_slide()
+	update_camera()
+
+const ROOM_SETTINGS := {
+	"kitchen": {"zoom": 0.9, "offset": Vector2(125, 0)},
+	"bedroom": {"zoom": 0.68, "offset": Vector2(123, -150)},
+	"dining_room": {"zoom": 0.8, "offset": Vector2(62, -220)},
+}
+
+const ROOM_MARGIN := 40.0
+
+func update_camera() -> void:
+	var target := animated_sprite_2d.global_position
+	var target_zoom := normal_zoom
+
+	for room_name in ROOMS:
+		var room: Rect2 = ROOMS[room_name]
+		if room.grow(ROOM_MARGIN).has_point(global_position):
+			var s: Dictionary = ROOM_SETTINGS[room_name]
+			target = room.get_center() + s["offset"]
+			target_zoom = Vector2(s["zoom"], s["zoom"])
+			break
+
+	camera.global_position = target
+	if not birds_eye:
+		var new_zoom := camera.zoom.lerp(target_zoom, 0.15)
+		if new_zoom.x > 0.01 and new_zoom.y > 0.01:
+			camera.zoom = new_zoom
 
 func set_birds_eye_zoom(zoom_out: bool) -> void:
 	var target_zoom := birds_eye_zoom if zoom_out else normal_zoom
@@ -66,6 +104,7 @@ func play_animation(dir: Vector2) -> void:
 		last_dir = "down"
 
 	play_anim(last_dir)
+
 
 func play_anim(anim_name: String) -> void:
 	if anim_name == "right":

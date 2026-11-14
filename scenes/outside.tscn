@@ -25,6 +25,7 @@ scale_min = 0.5
 scale_max = 1.5
 
 [node name="outside" type="Area2D" unique_id=950064928]
+metadata/_edit_vertical_guides_ = [6802.0, 10642.0]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=512208926]
 
