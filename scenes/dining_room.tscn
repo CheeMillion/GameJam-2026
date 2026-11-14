@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://byvwjdicclcmj"]
+[gd_scene format=3 uid="uid://drpfrlftqur4j"]
 
-[ext_resource type="Texture2D" uid="uid://c5nb1udk03ig0" path="res://assets/background/dining_room_base.png" id="1_gh0mb"]
+[ext_resource type="Texture2D" uid="uid://tvfjnx4n35n0" path="res://High_honor-pack/bg/dining_room_base.png" id="1_gh0mb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
 size = Vector2(208, 473.5)
