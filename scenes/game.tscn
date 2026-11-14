@@ -9,11 +9,14 @@
 [ext_resource type="Texture2D" uid="uid://bptep0lbkwyrd" path="res://assets/background/Screenshot 2026-11-14 223016.png" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://3bt8et0p56ro" path="res://scenes/outside.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" path="res://scenes/phone_ui.tscn" id="8_phone_ui"]
+[ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="9_pause_menu"]
 
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
 
 [node name="PhoneUI" parent="." instance=ExtResource("8_phone_ui")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("9_pause_menu")]
 
 [node name="Bedroom" parent="." unique_id=274227017 instance=ExtResource("1_fc0e3")]
 visible = false
