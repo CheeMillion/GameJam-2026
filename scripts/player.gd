@@ -43,7 +43,6 @@ func _physics_process(_delta: float) -> void:
 		play_anim("down_idle")
 	else:
 		process_movement()
-
 	move_and_slide()
 	update_camera()
 
