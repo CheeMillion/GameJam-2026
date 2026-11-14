@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dr0qu7v735hxf"]
+
+[ext_resource type="Script" uid="uid://yij60rbxonrx" path="res://scripts/player.gd" id="1_unnft"]
+[ext_resource type="Texture2D" uid="uid://ctd0dsshphip1" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00000.png" id="5_o73rr"]
+[ext_resource type="Texture2D" uid="uid://ctsmn6k2pq7no" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00004.png" id="6_63qk0"]
+[ext_resource type="Texture2D" uid="uid://c5anlxo5wy1q5" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00010.png" id="7_w5iru"]
+[ext_resource type="Texture2D" uid="uid://c8ugfot6ndxlq" path="res://assets/character sprites/walking anim MC/Mc005.png" id="8_ispul"]
+[ext_resource type="Texture2D" uid="uid://cf8sv0ip6pjd4" path="res://assets/character sprites/walking anim MC/Mc004.png" id="9_3dp66"]
+[ext_resource type="Texture2D" uid="uid://pniblu83yy35" path="res://assets/character sprites/walking anim MC/Mc007.png" id="10_7vdji"]
+[ext_resource type="Texture2D" uid="uid://rbxstt0jgp5o" path="res://assets/character sprites/walking anim MC/Mc006.png" id="11_yi4mf"]
+[ext_resource type="Texture2D" uid="uid://c1ulxlj077p0x" path="res://assets/character sprites/walking anim MC/Mc008.png" id="12_te80i"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfkbx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o73rr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_63qk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w5iru")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_ispul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_3dp66")
+}],
+"loop": 1,
+"name": &"left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_7vdji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_yi4mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_te80i")
+}],
+"loop": 1,
+"name": &"right",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aui74"]
+radius = 28.0
+height = 68.0
+
+[node name="side_scroll_player" type="CharacterBody2D" unique_id=1267552226 groups=["Player"]]
+script = ExtResource("1_unnft")
+SPEED = 250.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1192288827]
+position = Vector2(-1, -87)
+sprite_frames = SubResource("SpriteFrames_lfkbx")
+animation = &"idle"
+
+[node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1753766378]
+position = Vector2(2, -4)
+position_smoothing_enabled = true
+
+[node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=116085412]
+position = Vector2(0, -1)
+shape = SubResource("CapsuleShape2D_aui74")
