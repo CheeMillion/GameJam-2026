@@ -9,6 +9,8 @@ var last_dir := "down"
 var birds_eye := false
 var normal_zoom := Vector2.ONE
 var zoom_tween: Tween
+var slow_multiplier := 1.0
+var base_speed = 0
 
 const ROOMS := {
 	"kitchen": Rect2(4022, -67, 1478, 1026),
@@ -83,7 +85,8 @@ func set_birds_eye_zoom(zoom_out: bool) -> void:
 func process_movement() -> void:
 	var direction := Input.get_vector("left", "right", "up", "down")
 	var sprinting := Input.is_action_pressed("sprint")
-	current_speed = SPRINT_SPEED if sprinting else SPEED
+	base_speed = SPRINT_SPEED if sprinting else SPEED
+	current_speed = base_speed * slow_multiplier
 	velocity = direction * current_speed
 	animated_sprite_2d.speed_scale = 1.5 if sprinting else 1.0
 	play_animation(direction)
