@@ -68,7 +68,7 @@ func update_camera() -> void:
 
 	camera.global_position = target
 	if not birds_eye:
-		var new_zoom := camera.zoom.lerp(target_zoom, 0.15)
+		var new_zoom := camera.zoom.lerp(target_zoom, 1.0)
 		if new_zoom.x > 0.01 and new_zoom.y > 0.01:
 			camera.zoom = new_zoom
 

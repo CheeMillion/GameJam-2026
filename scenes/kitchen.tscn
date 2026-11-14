@@ -2347,10 +2347,13 @@ size = Vector2(167.25, 612)
 size = Vector2(120.5, 551)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77to7"]
-size = Vector2(455, 187)
+size = Vector2(319.5, 148.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pkoy"]
 size = Vector2(735, 14)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa112"]
+size = Vector2(393.75, 202.375)
 
 [node name="Kitchen" type="Area2D" unique_id=1442416576]
 
@@ -2384,9 +2387,13 @@ position = Vector2(2364.75, 1486.5)
 shape = SubResource("RectangleShape2D_vicex")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1418948737]
-position = Vector2(2959.5, 1476.5)
+position = Vector2(2907.25, 1480.25)
 shape = SubResource("RectangleShape2D_77to7")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1405900278]
 position = Vector2(2673.5, 1758)
 shape = SubResource("RectangleShape2D_1pkoy")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=2074108233]
+position = Vector2(3197, 1657)
+shape = SubResource("RectangleShape2D_sa112")
