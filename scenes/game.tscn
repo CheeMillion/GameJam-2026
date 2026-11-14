@@ -14,12 +14,13 @@
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
 
-[node name="PhoneUI" parent="." instance=ExtResource("8_phone_ui")]
+[node name="PhoneUI" parent="." unique_id=1874434826 instance=ExtResource("8_phone_ui")]
+visible = false
 
 [node name="PauseMenu" parent="." instance=ExtResource("9_pause_menu")]
 
 [node name="Bedroom" parent="." unique_id=274227017 instance=ExtResource("1_fc0e3")]
-visible = false
+position = Vector2(-2, 0)
 
 [node name="player" parent="." unique_id=1908451884 instance=ExtResource("1_80nbo")]
 position = Vector2(823, 259)

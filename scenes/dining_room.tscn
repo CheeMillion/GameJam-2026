@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c5nb1udk03ig0" path="res://assets/background/dining_room_base.png" id="1_gh0mb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
-size = Vector2(208, 473.5)
+size = Vector2(214, 473.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
 size = Vector2(181, 564)
@@ -18,13 +18,13 @@ size = Vector2(846, 397)
 size = Vector2(160.5, 389)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhfc8"]
-size = Vector2(54, 514.5)
+size = Vector2(64, 514.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aos7j"]
 size = Vector2(144.25, 162.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kv6x"]
-size = Vector2(100.875, 152.125)
+size = Vector2(116.875, 152.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hy5d6"]
 size = Vector2(261.5, 82.5)
@@ -51,7 +51,7 @@ texture = ExtResource("1_gh0mb")
 [node name="Invisle wall" type="StaticBody2D" parent="." unique_id=1457260038]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Invisle wall" unique_id=1445755656]
-position = Vector2(4296, 388.75)
+position = Vector2(4299, 388.75)
 shape = SubResource("RectangleShape2D_lfkbx")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Invisle wall" unique_id=2019922115]
@@ -71,7 +71,7 @@ position = Vector2(5477.25, 546.5)
 shape = SubResource("RectangleShape2D_1pkoy")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Invisle wall" unique_id=926748242]
-position = Vector2(4628, 382)
+position = Vector2(4633, 382)
 shape = SubResource("RectangleShape2D_nhfc8")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Invisle wall" unique_id=2077198044]
@@ -83,7 +83,7 @@ position = Vector2(4596.875, 564.125)
 shape = SubResource("RectangleShape2D_6kv6x")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Invisle wall" unique_id=819097563]
-position = Vector2(4691.5625, 375.9375)
+position = Vector2(4699.5625, 375.9375)
 shape = SubResource("RectangleShape2D_6kv6x")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Invisle wall" unique_id=1044930035]
