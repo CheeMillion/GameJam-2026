@@ -1,0 +1,22 @@
+Ren'Py Phone Skins - Licence
+Copyright (c) 2026 Julius Schmidt
+
+This licence covers every file of this pack: the .rpy files, the images, the demo project and the
+Umlaut Pixel 16 font where it is included. Fonts with their own licence file (fonts/OFL-*.txt) are
+under the SIL Open Font License 1.1 instead.
+
+YOU MAY
+- use the files in any number of your own games, visual novels and other projects, free or commercial,
+  and ship them inside those projects (also in compiled or archived form);
+- change the art, the colours and the code for your projects;
+- use them in projects you make for a client.
+
+YOU MAY NOT
+- sell, share, upload or give away the files, original or modified, on their own or as part of an
+  asset pack, UI kit, GUI kit, template or similar collection;
+- claim the art or the code as your own design.
+
+Credit is welcome but not required, for example: "Phone UI: Ren'Py Phone Skins by Julius Schmidt".
+
+The files are provided "as is", without warranty of any kind. The author is not liable for any damage
+arising from their use.
