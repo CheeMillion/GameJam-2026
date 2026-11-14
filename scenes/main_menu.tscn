@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bnteysxjor02v"]
 
 [ext_resource type="Script" uid="uid://bru30a8ywf666" path="res://scripts/main_menu.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://b5ri5ac11eemc" path="res://assets/hud sprites/Main Menu/Main Menu.png" id="2_background"]
+[ext_resource type="Texture2D" uid="uid://dh7j4rcacldji" path="res://assets/hud sprites/Main Menu/Main Menu - NEW.png" id="2_background"]
 [ext_resource type="Texture2D" uid="uid://dm1nkb3e5n0ch" path="res://assets/hud sprites/Main Menu/New Game.png" id="3_new_game"]
 [ext_resource type="Texture2D" uid="uid://bw0pfag33nsi6" path="res://assets/hud sprites/Main Menu/Settings.png" id="4_settings"]
 [ext_resource type="Texture2D" uid="uid://cgfcd8xtiiy6g" path="res://assets/hud sprites/Main Menu/Credits.png" id="5_credits"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dj6u0jw1vx1f1" path="res://assets/hud sprites/Main Menu/Settings Hover.png" id="8_settings_hover"]
 [ext_resource type="Texture2D" uid="uid://d2jkyqt4vputp" path="res://assets/hud sprites/Main Menu/Credits Hover.png" id="9_credits_hover"]
 [ext_resource type="Texture2D" uid="uid://bxd1mhfeygpwy" path="res://assets/hud sprites/Main Menu/Quit Hover.png" id="10_quit_hover"]
+[ext_resource type="Texture2D" uid="uid://b7eb0i32u0824" path="res://assets/hud sprites/Main Menu/CREDITS/Game Credit.png" id="11_credits_background"]
+[ext_resource type="Texture2D" uid="uid://hr6yooe7rebe" path="res://assets/hud sprites/Main Menu/CREDITS/Quit.png" id="12_credits_quit"]
+[ext_resource type="Texture2D" uid="uid://bcegmt5gfcc3e" path="res://assets/hud sprites/Main Menu/CREDITS/Quit Hover.png" id="13_credits_quit_hover"]
 
 [node name="MainMenu" type="Control" unique_id=167996084]
 layout_mode = 3
@@ -25,11 +28,11 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_right = 32.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_background")
 expand_mode = 1
-stretch_mode = 6
 
 [node name="Buttons" type="VBoxContainer" parent="." unique_id=1602950796]
 layout_mode = 1
@@ -38,10 +41,10 @@ anchor_left = 0.546
 anchor_top = 0.5
 anchor_right = 0.546
 anchor_bottom = 0.5
-offset_left = -184.99203
-offset_top = -100.000015
-offset_right = 129.008
-offset_bottom = 303.0
+offset_left = -203.99203
+offset_top = -105.00003
+offset_right = 110.007996
+offset_bottom = 298.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.85, 0.85)
@@ -74,4 +77,42 @@ layout_mode = 2
 focus_mode = 0
 texture_normal = ExtResource("6_quit")
 texture_hover = ExtResource("10_quit_hover")
+stretch_mode = 5
+
+[node name="CreditsOverlay" type="Control" parent="." unique_id=440752473]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 32.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="CreditsOverlay" unique_id=1690799303]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("11_credits_background")
+expand_mode = 1
+
+[node name="Quit" type="TextureButton" parent="CreditsOverlay" unique_id=662454884]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -146.0
+offset_right = 199.0
+offset_bottom = -43.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.75, 0.75)
+focus_mode = 0
+texture_normal = ExtResource("12_credits_quit")
+texture_hover = ExtResource("13_credits_quit_hover")
 stretch_mode = 5
