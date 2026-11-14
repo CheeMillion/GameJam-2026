@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" path="res://scenes/phone_ui.tscn" id="8_phone_ui"]
 [ext_resource type="PackedScene" uid="uid://dlq3umbm7ih5f" path="res://scenes/pause_menu.tscn" id="9_pause_menu"]
 [ext_resource type="Texture2D" uid="uid://cy2rxju50ngdg" path="res://assets/background/Screenshot 2026-11-15 031014.png" id="10_vtaks"]
+[ext_resource type="Texture2D" uid="uid://dtyhbqx8w3ope" path="res://assets/character sprites/portraits/Mom full body/momsprite.png" id="11_kvpfn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dinhu"]
+radius = 27.0
+height = 64.0
 
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
@@ -23,6 +28,7 @@ visible = false
 position = Vector2(-2, 0)
 
 [node name="player" parent="." unique_id=1908451884 instance=ExtResource("1_80nbo")]
+y_sort_enabled = true
 position = Vector2(1021, 257)
 
 [node name="Dining" parent="." unique_id=74292362 instance=ExtResource("3_fc0e3")]
@@ -105,6 +111,19 @@ position = Vector2(1660, 370)
 
 [node name="door" parent="teleporter6" index="1" unique_id=1363747465]
 position = Vector2(-2, 2)
+
+[node name="mom" type="CharacterBody2D" parent="." unique_id=1271642098]
+y_sort_enabled = true
+
+[node name="Momsprite" type="Sprite2D" parent="mom" unique_id=1244384614]
+position = Vector2(2687, 1526)
+scale = Vector2(1.0289207, 1.0507814)
+texture = ExtResource("11_kvpfn")
+offset = Vector2(0, -101.93)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="mom" unique_id=1509961627]
+position = Vector2(2685, 1532)
+shape = SubResource("CapsuleShape2D_dinhu")
 
 [editable path="Dining"]
 [editable path="teleporter"]
