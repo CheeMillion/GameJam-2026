@@ -1,6 +1,6 @@
 extends Area2D
 
-@export var slow_speed = 100.0
+@export var slow_speed = 200.0
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -12,4 +12,4 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
-		body.current_speed = body.SPEED   # back to normal
+		body.current_speed = body.SPEED   
