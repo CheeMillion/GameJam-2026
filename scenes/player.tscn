@@ -87,22 +87,30 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aui74"]
+<<<<<<< Updated upstream
 radius = 20.0
 height = 60.0
+=======
+radius = 39.0
+height = 78.0
+>>>>>>> Stashed changes
 
 [node name="Player" type="CharacterBody2D" unique_id=1267552226 groups=["Player"]]
 script = ExtResource("1_hqtel")
 SPEED = 250.0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1192288827]
-position = Vector2(-1, -87)
+position = Vector2(2, -100)
 sprite_frames = SubResource("SpriteFrames_lfkbx")
+<<<<<<< Updated upstream
 animation = &"idle"
+=======
+animation = &"left"
+>>>>>>> Stashed changes
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1753766378]
 position = Vector2(2, -4)
 position_smoothing_enabled = true
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=116085412]
-position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_aui74")
