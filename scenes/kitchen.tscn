@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://dwktpmg4em8i1"]
 
 [ext_resource type="Texture2D" uid="uid://cm5xhwoix7ple" path="res://assets/background/kitchen_night.png" id="1_7ilqw"]
+[ext_resource type="Texture2D" uid="uid://dtyhbqx8w3ope" path="res://assets/character sprites/portraits/Mom full body/momsprite.png" id="2_mrp8g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7ilqw"]
 texture = ExtResource("1_7ilqw")
@@ -2355,6 +2356,10 @@ size = Vector2(735, 14)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa112"]
 size = Vector2(393.75, 202.375)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfkbx"]
+radius = 24.0
+height = 82.0
+
 [node name="Kitchen" type="Area2D" unique_id=1442416576]
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1293819196]
@@ -2397,3 +2402,14 @@ shape = SubResource("RectangleShape2D_1pkoy")
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=2074108233]
 position = Vector2(3197, 1657)
 shape = SubResource("RectangleShape2D_sa112")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1558914479]
+
+[node name="Momsprite" type="Sprite2D" parent="CharacterBody2D" unique_id=1054411519]
+position = Vector2(2693, 1426)
+scale = Vector2(1.0289207, 1.0507814)
+texture = ExtResource("2_mrp8g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1778286544]
+position = Vector2(2691, 1513)
+shape = SubResource("CapsuleShape2D_lfkbx")
