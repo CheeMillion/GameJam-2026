@@ -4560,7 +4560,6 @@ sources/2 = SubResource("TileSetAtlasSource_o412v")
 [node name="Bedroom" type="Node2D" unique_id=274227017]
 
 [node name="invisiblewall" type="StaticBody2D" parent="." unique_id=9043200]
-visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="invisiblewall" unique_id=844070224]
 position = Vector2(790, -206)
