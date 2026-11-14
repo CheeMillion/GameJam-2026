@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://cixqwbax6y80e" path="res://scripts/pictureframe.gd" id="2_0grwd"]
 [ext_resource type="Texture2D" uid="uid://kyrt3vmri6ue" path="res://assets/background/bedroom_2 (1).png" id="2_kpde0"]
 [ext_resource type="Texture2D" uid="uid://c4g2gw7r1k1dw" path="res://assets/background/Award frame inspection.png" id="3_mkmp1"]
-[ext_resource type="Script" uid="uid://cy6bwdxxpmlwo" path="res://scripts/closet_interaction.gd" id="4_closet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
 size = Vector2(247.5, 155)
@@ -48,10 +47,7 @@ size = Vector2(671.5545, 112.49271)
 size = Vector2(56.5, 152)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kv6x"]
-size = Vector2(109, 285)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_closet"]
-size = Vector2(257, 235.5)
+size = Vector2(109, 503.5)
 
 [node name="Bedroom" type="Node2D" unique_id=274227017]
 
@@ -146,8 +142,8 @@ texture = ExtResource("3_mkmp1")
 region_enabled = true
 region_rect = Rect2(460, 120, 990, 800)
 
-[node name="CertificateInteraction" type="CollisionShape2D" parent="Area2D" unique_id=580684768]
-position = Vector2(19.5, 243.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=580684768]
+position = Vector2(19.5, 237.75)
 shape = SubResource("RectangleShape2D_6kv6x")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Area2D" unique_id=1925899357]
@@ -179,12 +175,3 @@ grow_vertical = 2
 texture = ExtResource("3_mkmp1")
 expand_mode = 1
 stretch_mode = 5
-
-[node name="ClosetInteraction" type="Area2D" parent="." unique_id=1366701434]
-position = Vector2(1080, 790)
-collision_layer = 0
-script = ExtResource("4_closet")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="ClosetInteraction" unique_id=1701944873]
-position = Vector2(-318.5, -151.25)
-shape = SubResource("RectangleShape2D_closet")

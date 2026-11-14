@@ -12,21 +12,18 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_nearby = true
-		_set_interaction_prompt(true)
+		print("Near ")
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("player"):
 		player_nearby = false
-		_set_interaction_prompt(false)
 		zoom_view.visible = false
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
+		print("player_nearby is: ", player_nearby)
 		if zoom_view.visible:
 			zoom_view.visible = false
 		elif player_nearby:
 			zoom_view.visible = true
-
-func _set_interaction_prompt(nearby: bool) -> void:
-	for prompt in get_tree().get_nodes_in_group("interaction_prompt"):
-		prompt.set_object_nearby(self, nearby)
+			print("zoom shown")

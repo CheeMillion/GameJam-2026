@@ -12,8 +12,6 @@ var normal_zoom := Vector2.ONE
 var zoom_tween: Tween
 var slow_multiplier := 1.0
 var base_speed = 0
-var story_stage := 0
-var frozen := false
 
 const ROOMS := {
 	"kitchen": Rect2(4022, -67, 1478, 1026),
@@ -39,11 +37,6 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	var holding_space := Input.is_key_pressed(KEY_SPACE)
-	if frozen:
-		velocity = Vector2.ZERO
-		move_and_slide()
-		return
-	
 	if holding_space != birds_eye:
 		birds_eye = holding_space
 		set_birds_eye_zoom(birds_eye)
