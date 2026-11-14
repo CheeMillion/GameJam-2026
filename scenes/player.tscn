@@ -10,11 +10,21 @@
 [ext_resource type="Texture2D" uid="uid://c8ugfot6ndxlq" path="res://assets/character sprites/walking anim MC/Mc005.png" id="8_5tmop"]
 [ext_resource type="Texture2D" uid="uid://cf8sv0ip6pjd4" path="res://assets/character sprites/walking anim MC/Mc004.png" id="9_7ahtn"]
 [ext_resource type="Texture2D" uid="uid://pniblu83yy35" path="res://assets/character sprites/walking anim MC/Mc007.png" id="10_7lmhl"]
+[ext_resource type="Texture2D" uid="uid://cccum1ubjcri6" path="res://assets/character sprites/walking anim MC/Mc003.png" id="10_ke2ow"]
+[ext_resource type="Texture2D" uid="uid://b4iuwf4l56mup" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00014.png" id="10_l71n6"]
 [ext_resource type="Texture2D" uid="uid://rbxstt0jgp5o" path="res://assets/character sprites/walking anim MC/Mc006.png" id="11_dx0e4"]
+[ext_resource type="Texture2D" uid="uid://uclvwe5kvmj2" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00017.png" id="11_ke2ow"]
 [ext_resource type="Texture2D" uid="uid://c1ulxlj077p0x" path="res://assets/character sprites/walking anim MC/Mc008.png" id="12_jm5j8"]
+[ext_resource type="Texture2D" uid="uid://ddnxrinvfkn5p" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00024.png" id="12_ujl30"]
 [ext_resource type="Texture2D" uid="uid://bf6beixxfrq52" path="res://assets/character sprites/walking anim MC/Mc009.png" id="13_7hik5"]
 [ext_resource type="Texture2D" uid="uid://dk4cj0yqmxfr2" path="res://assets/character sprites/walking anim MC/Mc010.png" id="14_qtqh7"]
 [ext_resource type="Texture2D" uid="uid://col8lsotnpuja" path="res://assets/character sprites/walking anim MC/Mc011.png" id="15_2wuci"]
+[ext_resource type="Texture2D" uid="uid://df8b1ph4ncu21" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00026.png" id="16_31cv2"]
+[ext_resource type="Texture2D" uid="uid://di0m13708v0cs" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00030.png" id="17_pf23h"]
+[ext_resource type="Texture2D" uid="uid://cmdyyk50tpve7" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00037.png" id="18_dt7fs"]
+[ext_resource type="Texture2D" uid="uid://3vj7thf7cotv" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00038.png" id="22_wqfne"]
+[ext_resource type="Texture2D" uid="uid://b3jev8knmxcxx" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00044.png" id="23_wnwbv"]
+[ext_resource type="Texture2D" uid="uid://c3v6h63ycb2ym" path="res://assets/character sprites/idle anim MC/Comp 1/Comp 1_00050.png" id="24_gl8cc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfkbx"]
 animations = [{
@@ -30,7 +40,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"down",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -43,8 +53,8 @@ animations = [{
 "texture": ExtResource("7_pbfsw")
 }],
 "loop": 1,
-"name": &"idle",
-"speed": 5.0
+"name": &"down_idle",
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -52,24 +62,55 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_7ahtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ke2ow")
 }],
 "loop": 1,
 "name": &"left",
-"speed": 5.0
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_7lmhl")
+"texture": ExtResource("10_l71n6")
 }, {
 "duration": 1.0,
+"texture": ExtResource("11_ke2ow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ujl30")
+}],
+"loop": 1,
+"name": &"left_idle",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("11_dx0e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_7lmhl")
 }, {
 "duration": 1.0,
 "texture": ExtResource("12_jm5j8")
 }],
 "loop": 1,
 "name": &"right",
-"speed": 5.0
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_31cv2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_pf23h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_dt7fs")
+}],
+"loop": 1,
+"name": &"right_idle",
+"speed": 6.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -83,7 +124,21 @@ animations = [{
 }],
 "loop": 1,
 "name": &"up",
-"speed": 5.0
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_wqfne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_wnwbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_gl8cc")
+}],
+"loop": 1,
+"name": &"up_idle",
+"speed": 6.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aui74"]
@@ -97,7 +152,7 @@ SPEED = 250.0
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1192288827]
 position = Vector2(2, -100)
 sprite_frames = SubResource("SpriteFrames_lfkbx")
-animation = &"left"
+animation = &"up_idle"
 
 [node name="Camera2D" type="Camera2D" parent="AnimatedSprite2D" unique_id=1753766378]
 position = Vector2(2, -4)
