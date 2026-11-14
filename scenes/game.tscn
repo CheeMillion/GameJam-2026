@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dlq3umbm7ih5f" path="res://scenes/pause_menu.tscn" id="9_pause_menu"]
 [ext_resource type="Texture2D" uid="uid://cy2rxju50ngdg" path="res://assets/background/Screenshot 2026-11-15 031014.png" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dtyhbqx8w3ope" path="res://assets/character sprites/portraits/Mom full body/momsprite.png" id="11_kvpfn"]
+[ext_resource type="Texture2D" uid="uid://dwvnqu0iq2pyy" path="res://assets/background/Screenshot 2026-11-15 034817.png" id="12_dinhu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dinhu"]
 radius = 27.0
@@ -20,7 +21,6 @@ height = 64.0
 y_sort_enabled = true
 
 [node name="PhoneUI" parent="." unique_id=1874434826 instance=ExtResource("8_phone_ui")]
-visible = false
 
 [node name="PauseMenu" parent="." unique_id=1370982993 instance=ExtResource("9_pause_menu")]
 
@@ -51,6 +51,7 @@ position = Vector2(4715, -71)
 position = Vector2(-11, -31)
 
 [node name="Kitchen" parent="." unique_id=1442416576 instance=ExtResource("4_ryrav")]
+visible = false
 
 [node name="teleporter2" parent="." unique_id=548929422 instance=ExtResource("4_7jktm")]
 position = Vector2(4521, 273)
@@ -124,6 +125,15 @@ offset = Vector2(0, -101.93)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="mom" unique_id=1509961627]
 position = Vector2(2685, 1532)
 shape = SubResource("CapsuleShape2D_dinhu")
+
+[node name="Polygon2D" type="Polygon2D" parent="." unique_id=847848084]
+y_sort_enabled = true
+position = Vector2(2890.41, 1564.997)
+scale = Vector2(1.215664, 1.218124)
+offset = Vector2(-400, -624.37)
+texture = ExtResource("12_dinhu")
+texture_offset = Vector2(404.76, 630.865)
+polygon = PackedVector2Array(436.68427, 424.0644, 386.73364, 424.0644, 279.68427, 424.0644, 277.096, 514.9857, 279.27234, 519.73395, 279.27234, 525.6693, 282.24, 526.8564, 283.81287, 615.28656, 497.00684, 611.5545, 492.34656, 517.7835, 495.6151, 426.34296)
 
 [editable path="Dining"]
 [editable path="teleporter"]

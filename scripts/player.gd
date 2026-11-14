@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var SPRINT_SPEED = 500.0
 @export var birds_eye_zoom := Vector2(0.5, 0.5)
 @export var zoom_duration := 0.25
+@export var camera_offset := Vector2(0, -100)
 var current_speed = SPEED
 var last_dir := "down"
 var birds_eye := false
@@ -49,15 +50,15 @@ func _physics_process(_delta: float) -> void:
 	update_camera()
 
 const ROOM_SETTINGS := {
-	"kitchen": {"zoom": 0.9, "offset": Vector2(125, 0)},
-	"bedroom": {"zoom": 0.68, "offset": Vector2(123, -150)},
-	"dining_room": {"zoom": 0.8, "offset": Vector2(62, -220)},
+	"kitchen": {"zoom": 0.9, "offset": Vector2(125, 50)},
+	"bedroom": {"zoom": 0.68, "offset": Vector2(123, -80)},
+	"dining_room": {"zoom": 0.8, "offset": Vector2(62, -140)},
 }
 
-const ROOM_MARGIN := 40.0
+const ROOM_MARGIN := 50.0
 
 func update_camera() -> void:
-	var target := animated_sprite_2d.global_position
+	var target := global_position + camera_offset
 	var target_zoom := normal_zoom
 
 	for room_name in ROOMS:

@@ -11,7 +11,7 @@ size = Vector2(247.5, 155)
 size = Vector2(310.5, 1271)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vicex"]
-size = Vector2(368, 93.875)
+size = Vector2(243, 64.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77to7"]
 size = Vector2(882, 360)
@@ -20,10 +20,10 @@ size = Vector2(882, 360)
 size = Vector2(261, 187)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhfc8"]
-size = Vector2(864.75, 384)
+size = Vector2(865.315, 382)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aos7j"]
-size = Vector2(262.51675, 721.864)
+size = Vector2(262.51675, 735.932)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_erdqr"]
 size = Vector2(297, 912)
@@ -42,6 +42,9 @@ size = Vector2(83, 70.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1ynku"]
 size = Vector2(671.5545, 112.49271)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxe77"]
+size = Vector2(56.5, 152)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6kv6x"]
 size = Vector2(109, 503.5)
@@ -64,7 +67,7 @@ position = Vector2(1259, 138)
 shape = SubResource("RectangleShape2D_aui74")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="invisiblewall" unique_id=990495797]
-position = Vector2(445, 714.9375)
+position = Vector2(439.5, 729.4375)
 shape = SubResource("RectangleShape2D_vicex")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="invisiblewall" unique_id=1022674697]
@@ -76,11 +79,11 @@ position = Vector2(757, 670)
 shape = SubResource("RectangleShape2D_1pkoy")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="invisiblewall" unique_id=1029664293]
-position = Vector2(-264.94, 791)
+position = Vector2(-264.6575, 792)
 shape = SubResource("RectangleShape2D_nhfc8")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="invisiblewall" unique_id=811750683]
-position = Vector2(-388, 233)
+position = Vector2(-388, 240.03401)
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_aos7j")
 
@@ -109,6 +112,14 @@ shape = SubResource("RectangleShape2D_sa112")
 position = Vector2(20.895, 908)
 rotation = -0.9574584
 shape = SubResource("RectangleShape2D_1ynku")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="invisiblewall" unique_id=411590885]
+position = Vector2(290.25, 773)
+shape = SubResource("RectangleShape2D_pxe77")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="invisiblewall" unique_id=1680427761]
+position = Vector2(233, 741)
+shape = SubResource("RectangleShape2D_pxe77")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1882334074]
 
