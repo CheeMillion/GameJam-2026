@@ -6,10 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://bw0pfag33nsi6" path="res://assets/hud sprites/Main Menu/Settings.png" id="4_settings"]
 [ext_resource type="Texture2D" uid="uid://cgfcd8xtiiy6g" path="res://assets/hud sprites/Main Menu/Credits.png" id="5_credits"]
 [ext_resource type="Texture2D" uid="uid://t5wvw3s07ccq" path="res://assets/hud sprites/Main Menu/Quit.png" id="6_quit"]
-[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/New Game Hover.png" id="7_new_game_hover"]
-[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/Settings Hover.png" id="8_settings_hover"]
-[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/Credits Hover.png" id="9_credits_hover"]
-[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/Quit Hover.png" id="10_quit_hover"]
+[ext_resource type="Texture2D" uid="uid://dq1lpw78xuv4t" path="res://assets/hud sprites/Main Menu/New Game Hover.png" id="7_new_game_hover"]
+[ext_resource type="Texture2D" uid="uid://dj6u0jw1vx1f1" path="res://assets/hud sprites/Main Menu/Settings Hover.png" id="8_settings_hover"]
+[ext_resource type="Texture2D" uid="uid://d2jkyqt4vputp" path="res://assets/hud sprites/Main Menu/Credits Hover.png" id="9_credits_hover"]
+[ext_resource type="Texture2D" uid="uid://bxd1mhfeygpwy" path="res://assets/hud sprites/Main Menu/Quit Hover.png" id="10_quit_hover"]
 
 [node name="MainMenu" type="Control" unique_id=167996084]
 layout_mode = 3
@@ -33,17 +33,18 @@ stretch_mode = 6
 
 [node name="Buttons" type="VBoxContainer" parent="." unique_id=1602950796]
 layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
+anchors_preset = -1
+anchor_left = 0.546
 anchor_top = 0.5
-anchor_right = 0.5
+anchor_right = 0.546
 anchor_bottom = 0.5
-offset_left = -150.0
-offset_top = -119.0
-offset_right = 170.0
-offset_bottom = 284.0
+offset_left = -184.99203
+offset_top = -100.000015
+offset_right = 129.008
+offset_bottom = 303.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.85, 0.85)
 theme_override_constants/separation = 8
 alignment = 1
 
