@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://bnteysxjor02v"]
+
+[ext_resource type="Script" uid="uid://bru30a8ywf666" path="res://scripts/main_menu.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://b5ri5ac11eemc" path="res://assets/hud sprites/Main Menu/Main Menu.png" id="2_background"]
+[ext_resource type="Texture2D" uid="uid://dm1nkb3e5n0ch" path="res://assets/hud sprites/Main Menu/New Game.png" id="3_new_game"]
+[ext_resource type="Texture2D" uid="uid://bw0pfag33nsi6" path="res://assets/hud sprites/Main Menu/Settings.png" id="4_settings"]
+[ext_resource type="Texture2D" uid="uid://cgfcd8xtiiy6g" path="res://assets/hud sprites/Main Menu/Credits.png" id="5_credits"]
+[ext_resource type="Texture2D" uid="uid://t5wvw3s07ccq" path="res://assets/hud sprites/Main Menu/Quit.png" id="6_quit"]
+[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/New Game Hover.png" id="7_new_game_hover"]
+[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/Settings Hover.png" id="8_settings_hover"]
+[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/Credits Hover.png" id="9_credits_hover"]
+[ext_resource type="Texture2D" path="res://assets/hud sprites/Main Menu/Quit Hover.png" id="10_quit_hover"]
+
+[node name="MainMenu" type="Control" unique_id=167996084]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2004871185]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_background")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=1602950796]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -119.0
+offset_right = 170.0
+offset_bottom = 284.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 8
+alignment = 1
+
+[node name="NewGame" type="TextureButton" parent="Buttons" unique_id=1058058350]
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("3_new_game")
+texture_hover = ExtResource("7_new_game_hover")
+stretch_mode = 5
+
+[node name="Settings" type="TextureButton" parent="Buttons" unique_id=718929183]
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("4_settings")
+texture_hover = ExtResource("8_settings_hover")
+stretch_mode = 5
+
+[node name="Credits" type="TextureButton" parent="Buttons" unique_id=1283183392]
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("5_credits")
+texture_hover = ExtResource("9_credits_hover")
+stretch_mode = 5
+
+[node name="Quit" type="TextureButton" parent="Buttons" unique_id=2111253900]
+layout_mode = 2
+focus_mode = 0
+texture_normal = ExtResource("6_quit")
+texture_hover = ExtResource("10_quit_hover")
+stretch_mode = 5
