@@ -5,11 +5,11 @@
 [ext_resource type="PackedScene" uid="uid://drpfrlftqur4j" path="res://scenes/dining_room.tscn" id="3_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bnpgabsi758nh" path="res://scenes/teleporter.tscn" id="4_7jktm"]
 [ext_resource type="PackedScene" uid="uid://dwktpmg4em8i1" path="res://scenes/kitchen.tscn" id="4_ryrav"]
-[ext_resource type="Texture2D" uid="uid://i81d4ygsa4lc" path="res://assets/background/Screenshot 2026-11-14 215348.png" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://bptep0lbkwyrd" path="res://assets/background/Screenshot 2026-11-14 223016.png" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://3bt8et0p56ro" path="res://scenes/outside.tscn" id="7_u5sy4"]
 [ext_resource type="PackedScene" path="res://scenes/phone_ui.tscn" id="8_phone_ui"]
 [ext_resource type="PackedScene" uid="uid://dlq3umbm7ih5f" path="res://scenes/pause_menu.tscn" id="9_pause_menu"]
+[ext_resource type="Texture2D" uid="uid://cy2rxju50ngdg" path="res://assets/background/Screenshot 2026-11-15 031014.png" id="10_vtaks"]
 
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
@@ -56,13 +56,6 @@ position = Vector2(-185.89586, -4685.556)
 [node name="door" parent="teleporter2" index="1" unique_id=1363747465]
 position = Vector2(14.877258, -14.130228)
 
-[node name="diagonal wall" type="Polygon2D" parent="." unique_id=531016247]
-z_index = 1
-position = Vector2(-289, 448)
-antialiased = true
-texture = ExtResource("5_iywne")
-polygon = PackedVector2Array(41.15802, 35.11496, 463.15802, 34.11496, 552.1581, 94.11497, 553.1581, 307.115, 40, 317)
-
 [node name="object1" type="Polygon2D" parent="." unique_id=1231332790]
 z_index = 1
 position = Vector2(260.00293, 471.31342)
@@ -71,11 +64,19 @@ texture = ExtResource("6_p57ef")
 texture_offset = Vector2(-3.29, -3.01)
 polygon = PackedVector2Array(35.873505, 166.31862, 36.169502, 100.28922, 93.54446, 99.89353, 91.83783, 92.03615, 91.18379, 84.351265, 89.81648, 75.26754, 85.35689, 66.658714, 86.78825, 55.754036, 95.42148, 56.833187, 99.73809, 60.61022, 113.407364, 56.833187, 128.15578, 55.93389, 139.8466, 58.0922, 143.98337, 59.53107, 146.32153, 54.135307, 152.25687, 54.49502, 154.5946, 57.732788, 155.13419, 64.56742, 151.537, 69.783325, 149.91371, 89.567024, 148.47484, 100.538414, 204.73315, 98.11293, 205.3272, 165.73929)
 
+[node name="wall" type="Polygon2D" parent="." unique_id=1354380532]
+z_index = 1
+position = Vector2(-300.2342, -339.7707)
+scale = Vector2(1.4961178, 1.4644976)
+texture = ExtResource("10_vtaks")
+polygon = PackedVector2Array(27.560783, 559.5031, 201.03491, 558.8325, 313.7917, 558.3967, 376.57077, 600.0458, 376.7729, 652.28876, 377.1322, 745.183, 24.887207, 766.6593)
+uv = PackedVector2Array(27.560783, 559.5031, 313.7917, 558.3967, 376.57077, 600.0458, 377.1322, 745.183, 46.7471, 746.8573)
+
 [node name="teleporter3" parent="." unique_id=854443494 instance=ExtResource("4_7jktm")]
 position = Vector2(4224, 682)
 
 [node name="DestinationPoint" parent="teleporter3" index="0" unique_id=880137768]
-position = Vector2(-1286, 977)
+position = Vector2(-1290, 992)
 
 [node name="door" parent="teleporter3" index="1" unique_id=1363747465]
 position = Vector2(-7, -6)
