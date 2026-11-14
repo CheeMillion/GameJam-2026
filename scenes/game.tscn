@@ -1,21 +1,19 @@
-[gd_scene format=4 uid="uid://rqd57oslyrf7"]
+[gd_scene format=3 uid="uid://rqd57oslyrf7"]
 
 [ext_resource type="PackedScene" uid="uid://ejobcreypdh3" path="res://scenes/player.tscn" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://ds0sjluox6u5i" path="res://scenes/bedroom.tscn" id="1_fc0e3"]
-[ext_resource type="Texture2D" uid="uid://cm5xhwoix7ple" path="res://assets/background/kitchen_night.png" id="2_p57ef"]
 [ext_resource type="PackedScene" uid="uid://drpfrlftqur4j" path="res://scenes/dining_room.tscn" id="3_fc0e3"]
 [ext_resource type="PackedScene" uid="uid://bnpgabsi758nh" path="res://scenes/teleporter.tscn" id="4_7jktm"]
+[ext_resource type="PackedScene" uid="uid://dwktpmg4em8i1" path="res://scenes/kitchen.tscn" id="4_ryrav"]
 [ext_resource type="Texture2D" uid="uid://i81d4ygsa4lc" path="res://assets/background/Screenshot 2026-11-14 215348.png" id="5_iywne"]
 [ext_resource type="Texture2D" uid="uid://bptep0lbkwyrd" path="res://assets/background/Screenshot 2026-11-14 223016.png" id="6_p57ef"]
+[ext_resource type="PackedScene" uid="uid://3bt8et0p56ro" path="res://scenes/outside.tscn" id="7_u5sy4"]
 
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
 
 [node name="Bedroom" parent="." unique_id=274227017 instance=ExtResource("1_fc0e3")]
 visible = false
-
-[node name="CollisionShape2D3" parent="Bedroom/invisiblewall" parent_id_path=PackedInt32Array(274227017, 9043200) index="2" unique_id=1687147653]
-position = Vector2(1284, 154)
 
 [node name="player" parent="." unique_id=1908451884 instance=ExtResource("1_80nbo")]
 position = Vector2(823, 259)
@@ -27,6 +25,10 @@ offset_left = 3858.0
 offset_top = -77.0
 offset_right = 5778.0
 offset_bottom = 1003.0
+
+[node name="outside" parent="." unique_id=950064928 instance=ExtResource("7_u5sy4")]
+
+[node name="Kitchen" parent="." unique_id=1442416576 instance=ExtResource("4_ryrav")]
 
 [node name="teleporter" parent="." unique_id=1620013102 instance=ExtResource("4_7jktm")]
 position = Vector2(-220, 403)
@@ -62,6 +64,44 @@ texture = ExtResource("6_p57ef")
 texture_offset = Vector2(-3.29, -3.01)
 polygon = PackedVector2Array(35.873505, 166.31862, 36.169502, 100.28922, 93.54446, 99.89353, 91.83783, 92.03615, 91.18379, 84.351265, 89.81648, 75.26754, 85.35689, 66.658714, 86.78825, 55.754036, 95.42148, 56.833187, 99.73809, 60.61022, 113.407364, 56.833187, 128.15578, 55.93389, 139.8466, 58.0922, 143.98337, 59.53107, 146.32153, 54.135307, 152.25687, 54.49502, 154.5946, 57.732788, 155.13419, 64.56742, 151.537, 69.783325, 149.91371, 89.567024, 148.47484, 100.538414, 204.73315, 98.11293, 205.3272, 165.73929)
 
+[node name="teleporter3" parent="." unique_id=854443494 instance=ExtResource("4_7jktm")]
+position = Vector2(4224, 682)
+
+[node name="DestinationPoint" parent="teleporter3" index="0" unique_id=880137768]
+position = Vector2(-1273, 979)
+
+[node name="door" parent="teleporter3" index="1" unique_id=1363747465]
+position = Vector2(-7, -6)
+
+[node name="teleporter4" parent="." unique_id=1969137172 instance=ExtResource("4_7jktm")]
+position = Vector2(3010, 1667)
+
+[node name="DestinationPoint" parent="teleporter4" index="0" unique_id=880137768]
+position = Vector2(1294, -952)
+
+[node name="teleporter5" parent="." unique_id=1614241934 instance=ExtResource("4_7jktm")]
+position = Vector2(6903.9995, 879.99994)
+rotation = -1.579523
+
+[node name="DestinationPoint" parent="teleporter5" index="0" unique_id=880137768]
+position = Vector2(315.84616, -1585.3035)
+
+[node name="door" parent="teleporter5" index="1" unique_id=1363747465]
+position = Vector2(0.05230713, -5.9993935)
+
+[node name="teleporter6" parent="." unique_id=657724967 instance=ExtResource("4_7jktm")]
+position = Vector2(5392, 557)
+
+[node name="DestinationPoint" parent="teleporter6" index="0" unique_id=880137768]
+position = Vector2(1660, 370)
+
+[node name="door" parent="teleporter6" index="1" unique_id=1363747465]
+position = Vector2(-2, 2)
+
 [editable path="Dining"]
 [editable path="teleporter"]
 [editable path="teleporter2"]
+[editable path="teleporter3"]
+[editable path="teleporter4"]
+[editable path="teleporter5"]
+[editable path="teleporter6"]
