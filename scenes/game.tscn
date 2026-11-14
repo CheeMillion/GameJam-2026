@@ -6527,7 +6527,7 @@ position = Vector2(4521, 273)
 rotation = -1.5620697
 
 [node name="DestinationPoint" parent="teleporter2" index="0" unique_id=880137768]
-position = Vector2(-309.85834, -3076.413)
+position = Vector2(-185.89586, -4685.556)
 
 [node name="door" parent="teleporter2" index="1" unique_id=1363747465]
 position = Vector2(14.877258, -14.130228)
