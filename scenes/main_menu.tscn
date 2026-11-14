@@ -80,6 +80,7 @@ texture_hover = ExtResource("10_quit_hover")
 stretch_mode = 5
 
 [node name="CreditsOverlay" type="Control" parent="." unique_id=440752473]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
