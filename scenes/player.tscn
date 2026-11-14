@@ -145,6 +145,9 @@ animations = [{
 radius = 39.0
 height = 78.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa112"]
+size = Vector2(79.875, 34.75)
+
 [node name="Player" type="CharacterBody2D" unique_id=1267552226 groups=["Player"]]
 script = ExtResource("1_hqtel")
 SPEED = 250.0
@@ -162,3 +165,10 @@ offset = Vector2(0, -112.21)
 
 [node name="CollisionPolygon2D" type="CollisionShape2D" parent="." unique_id=116085412]
 shape = SubResource("CapsuleShape2D_aui74")
+
+[node name="InteractArea" type="Area2D" parent="." unique_id=1593851126]
+position = Vector2(64, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea" unique_id=1531000836]
+position = Vector2(8, -1)
+shape = SubResource("RectangleShape2D_sa112")

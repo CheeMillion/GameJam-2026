@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 Fade="*uid://ctwcsgkbx6cuj"
 GameManager="*uid://om4o1tuchuf6"
 Dialogue="*uid://ditdu27vh6um6"
+DialogueManager="*uid://dpbp6uupbjh34"
 
 [display]
 
@@ -76,4 +77,3 @@ interact={
 [rendering]
 
 rendering_device/driver.windows="d3d12"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)

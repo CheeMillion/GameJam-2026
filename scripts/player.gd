@@ -23,6 +23,8 @@ const ROOMS := {
 @export var right_scale := Vector2(0.91, 0.91)
 @export var right_idle_scale := Vector2(1.0, 1.0)
 
+@onready var interact_area: Area2D = $InteractArea
+@export var interact_reach := 80.0
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var camera: Camera2D = $Camera2D
 
@@ -35,8 +37,11 @@ func _ready() -> void:
 	camera.limit_top = -10000000
 	camera.limit_right = 10000000
 	camera.limit_bottom = 10000000
+	DialogueManager.dialogue_started.connect(func(): can_move = false)
+	DialogueManager.dialogue_finished.connect(func(): can_move = true)
 
 func _physics_process(_delta: float) -> void:
+	update_interact_area()
 	if not can_move:   # NEW
 		velocity = Vector2.ZERO
 		play_anim(last_dir + "_idle")
@@ -125,3 +130,28 @@ func play_anim(anim_name: String) -> void:
 	else:
 		animated_sprite_2d.scale = Vector2.ONE
 	animated_sprite_2d.play(anim_name)
+
+
+# ---------- INTERACTION (the missing part) ----------
+
+func update_interact_area() -> void:
+	match last_dir:
+		"up": interact_area.position = Vector2(0, -interact_reach)
+		"down": interact_area.position = Vector2(0, interact_reach)
+		"left": interact_area.position = Vector2(-interact_reach, 0)
+		"right": interact_area.position = Vector2(interact_reach, 0)
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not can_move or birds_eye:
+		return
+	if event.is_action_pressed("interact"):
+		var closest: Interactable = null
+		var best := INF
+		for area in interact_area.get_overlapping_areas():
+			if area is Interactable:
+				var d := global_position.distance_to(area.global_position)
+				if d < best:
+					best = d
+					closest = area
+		if closest:
+			closest.interact()

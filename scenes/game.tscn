@@ -12,15 +12,20 @@
 [ext_resource type="Texture2D" uid="uid://cy2rxju50ngdg" path="res://assets/background/Screenshot 2026-11-15 031014.png" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://dtyhbqx8w3ope" path="res://assets/character sprites/portraits/Mom full body/momsprite.png" id="11_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dwvnqu0iq2pyy" path="res://assets/background/Screenshot 2026-11-15 034817.png" id="12_dinhu"]
+[ext_resource type="Script" uid="uid://bhu0crfo7nc5l" path="res://scripts/Interactable.gd" id="13_kvuet"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dinhu"]
 radius = 27.0
 height = 64.0
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sa112"]
+size = Vector2(186, 114)
+
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
 
 [node name="PhoneUI" parent="." unique_id=1874434826 instance=ExtResource("8_phone_ui")]
+visible = false
 
 [node name="PauseMenu" parent="." unique_id=1370982993 instance=ExtResource("9_pause_menu")]
 
@@ -134,6 +139,15 @@ offset = Vector2(-400, -624.37)
 texture = ExtResource("12_dinhu")
 texture_offset = Vector2(404.76, 630.865)
 polygon = PackedVector2Array(436.68427, 424.0644, 386.73364, 424.0644, 279.68427, 424.0644, 277.096, 514.9857, 279.27234, 519.73395, 279.27234, 525.6693, 282.24, 526.8564, 283.81287, 615.28656, 497.00684, 611.5545, 492.34656, 517.7835, 495.6151, 426.34296)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1709750553]
+position = Vector2(606, 76)
+script = ExtResource("13_kvuet")
+lines = Array[String](["Hello!"])
+repeat_lines = Array[String](["YOU NIGGER", "you chigger", "", "", ""])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1518700088]
+shape = SubResource("RectangleShape2D_sa112")
 
 [editable path="Dining"]
 [editable path="teleporter"]
