@@ -64,7 +64,7 @@ offset_right = 392.0
 offset_bottom = 204.0
 mouse_filter = 2
 theme_override_colors/font_color = Color(0.94, 0.95, 0.98, 1)
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 30
 text = "Come downstairs to the kitchen, please."
 autowrap_mode = 2
 
