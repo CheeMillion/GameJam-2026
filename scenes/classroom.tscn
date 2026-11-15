@@ -1,12 +1,9 @@
 [gd_scene format=3 uid="uid://dh27au414huj7"]
 
-[ext_resource type="Texture2D" uid="uid://wksqljffsdui" path="res://assets/character sprites/classmates/Screenshot_2026-11-15_090932-removebg-preview.png" id="1_rt84g"]
 [ext_resource type="Texture2D" uid="uid://bbxv4wbele8iy" path="res://assets/background/Classroom_base.png" id="1_w75qy"]
 [ext_resource type="Texture2D" uid="uid://kskb7dwphdb2" path="res://assets/object item sprites/school chair bottom.png" id="2_x5cc4"]
 [ext_resource type="Texture2D" uid="uid://cotvuwc2nvp6g" path="res://assets/object item sprites/school tables.png" id="3_kkrti"]
 [ext_resource type="Texture2D" uid="uid://cykqh2gb378j8" path="res://assets/object item sprites/school chair top.png" id="4_xubko"]
-[ext_resource type="Texture2D" uid="uid://c2vhx1mlarjse" path="res://assets/character sprites/classmates/Screenshot_2026-11-15_090525-removebg-preview.png" id="6_cj0lk"]
-[ext_resource type="Texture2D" uid="uid://bvi2f6lu77eq1" path="res://assets/character sprites/classmates/Screenshot_2026-11-15_090737-removebg-preview.png" id="7_rlgmb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vicex"]
 size = Vector2(22, 1668)
@@ -25,14 +22,6 @@ size = Vector2(119, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhfc8"]
 size = Vector2(264, 227.5)
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aui74"]
-radius = 22.49414
-height = 150.07031
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfkbx"]
-radius = 28.0
-height = 204.0
 
 [node name="classroom" type="Node2D" unique_id=888609053]
 position = Vector2(11882, 1013)
@@ -132,27 +121,6 @@ texture = ExtResource("2_x5cc4")
 position = Vector2(167, 1295)
 texture = ExtResource("4_xubko")
 
-[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1362087420]
-position = Vector2(147, 979)
-scale = Vector2(1.5213752, 1.1264485)
-texture = ExtResource("1_rt84g")
-
-[node name="Sprite2D4" type="Sprite2D" parent="." unique_id=443028203]
-position = Vector2(899.9999, 663)
-scale = Vector2(1.5213752, 1.1264485)
-texture = ExtResource("1_rt84g")
-
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1741044840]
-position = Vector2(57, 414)
-scale = Vector2(1.4365731, 1.7280223)
-texture = ExtResource("6_cj0lk")
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=596941374]
-position = Vector2(1026.7383, 1492.9885)
-scale = Vector2(1.709411, 1.6679919)
-skew = 0.1361357
-texture = ExtResource("7_rlgmb")
-
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=181792306]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1975654921]
@@ -187,8 +155,7 @@ polygon = PackedVector2Array(610, -123, 867, -119, 864, 103, 603, 107)
 polygon = PackedVector2Array(404, 556, 668, 559, 662, 776, 568, 773, 495, 773, 414, 782)
 
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2003259779]
-position = Vector2(-3, 0)
-polygon = PackedVector2Array(28, 834, 34, 1075, 113, 1072, 119, 1113, 188, 1110, 204, 1063, 291, 1079, 288, 828)
+polygon = PackedVector2Array(28, 839, 34, 1080, 113, 1077, 119, 1118, 188, 1115, 204, 1068, 291, 1084, 288, 833)
 
 [node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=653142377]
 polygon = PackedVector2Array(762, 836, 762, 1062, 797, 1102, 866, 1093, 875, 1062, 1020, 1074, 1020, 826)
@@ -204,13 +171,3 @@ polygon = PackedVector2Array(411, 1132, 413, 1368, 505, 1364, 524, 1405, 585, 14
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=377142515]
 polygon = PackedVector2Array(768, 1130, 766, 1354, 928, 1354, 931, 1440, 1009, 1438, 1021, 1356, 1023, 1132)
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1233567165]
-position = Vector2(1039, 1506)
-scale = Vector2(1.709411, 1.6679919)
-skew = 0.1361357
-shape = SubResource("CapsuleShape2D_aui74")
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1237786329]
-position = Vector2(57, 420)
-shape = SubResource("CapsuleShape2D_lfkbx")
