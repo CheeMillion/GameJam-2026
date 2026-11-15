@@ -26,6 +26,14 @@ size = Vector2(119, 49)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhfc8"]
 size = Vector2(264, 227.5)
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aui74"]
+radius = 22.49414
+height = 150.07031
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfkbx"]
+radius = 28.0
+height = 204.0
+
 [node name="classroom" type="Node2D" unique_id=888609053]
 position = Vector2(11882, 1013)
 
@@ -134,6 +142,17 @@ position = Vector2(899.9999, 663)
 scale = Vector2(1.5213752, 1.1264485)
 texture = ExtResource("1_rt84g")
 
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1741044840]
+position = Vector2(57, 414)
+scale = Vector2(1.4365731, 1.7280223)
+texture = ExtResource("6_cj0lk")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=596941374]
+position = Vector2(1026.7383, 1492.9885)
+scale = Vector2(1.709411, 1.6679919)
+skew = 0.1361357
+texture = ExtResource("7_rlgmb")
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=181792306]
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1975654921]
@@ -186,13 +205,12 @@ polygon = PackedVector2Array(411, 1132, 413, 1368, 505, 1364, 524, 1405, 585, 14
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=377142515]
 polygon = PackedVector2Array(768, 1130, 766, 1354, 928, 1354, 931, 1440, 1009, 1438, 1021, 1356, 1023, 1132)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1741044840]
-position = Vector2(57.0002, 414.00006)
-scale = Vector2(1.4365731, 1.7280222)
-texture = ExtResource("6_cj0lk")
-
-[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=596941374]
-position = Vector2(1026.738, 1492.9885)
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1233567165]
+position = Vector2(1039, 1506)
 scale = Vector2(1.709411, 1.6679919)
-skew = 0.13613568
-texture = ExtResource("7_rlgmb")
+skew = 0.1361357
+shape = SubResource("CapsuleShape2D_aui74")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=1237786329]
+position = Vector2(57, 420)
+shape = SubResource("CapsuleShape2D_lfkbx")
