@@ -23,8 +23,24 @@ size = Vector2(119, 49)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nhfc8"]
 size = Vector2(264, 227.5)
 
-[node name="classroom" type="Node2D" unique_id=888609053]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_aui74"]
+radius = 22.49414
+height = 150.07031
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_lfkbx"]
+radius = 28.0
+height = 204.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vicex"]
+radius = 31.0
+height = 126.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aos7j"]
+size = Vector2(1419, 909)
+
+[node name="classroom" type="Area2D" unique_id=1767093319]
 position = Vector2(11882, 1013)
+script = ExtResource("1_rlgmb")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=149451042]
 

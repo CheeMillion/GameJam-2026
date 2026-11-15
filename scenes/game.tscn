@@ -40,7 +40,7 @@ position = Vector2(-2, 0)
 
 [node name="player" parent="." unique_id=1908451884 instance=ExtResource("1_80nbo")]
 y_sort_enabled = true
-position = Vector2(1021, 257)
+position = Vector2(985, 282)
 
 [node name="Dining" parent="." unique_id=74292362 instance=ExtResource("3_fc0e3")]
 
