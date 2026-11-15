@@ -114,20 +114,8 @@ shape = SubResource("RectangleShape2D_olta5")
 position = Vector2(5328, 557)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TeleporterBarrier" unique_id=309120512]
+position = Vector2(-8, 18)
 shape = SubResource("RectangleShape2D_teleporter_barrier")
-disabled = true
-
-[node name="Boards" type="Polygon2D" parent="TeleporterBarrier" unique_id=309120513]
-color = Color(0.48, 0.25, 0.12, 1)
-polygon = PackedVector2Array(-24, -240, 24, -240, 24, 240, -24, 240)
-
-[node name="RailTop" type="Polygon2D" parent="TeleporterBarrier" unique_id=309120514]
-color = Color(0.72, 0.47, 0.25, 1)
-polygon = PackedVector2Array(-32, -202, 32, -202, 32, -172, -32, -172)
-
-[node name="RailBottom" type="Polygon2D" parent="TeleporterBarrier" unique_id=309120515]
-color = Color(0.72, 0.47, 0.25, 1)
-polygon = PackedVector2Array(-32, 172, 32, 172, 32, 202, -32, 202)
 
 [node name="ParallaxBackground2" type="ParallaxBackground" parent="." unique_id=1850293132]
 
