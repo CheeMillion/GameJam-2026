@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bs3ln3d80wpus"
-path="res://.godot/imported/images-removebg-preview.png-6f92ed8688c4d58feea8df3a884aba64.ctex"
+uid="uid://dy4ippau2et1d"
+path="res://.godot/imported/momsprite_1_yellow_green.png-6ecfbac5725e86ed53cd487b759cfba2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/classmates/images-removebg-preview.png"
-dest_files=["res://.godot/imported/images-removebg-preview.png-6f92ed8688c4d58feea8df3a884aba64.ctex"]
+source_file="res://assets/character sprites/momsprite_1_yellow_green.png"
+dest_files=["res://.godot/imported/momsprite_1_yellow_green.png-6ecfbac5725e86ed53cd487b759cfba2.ctex"]
 
 [params]
 
