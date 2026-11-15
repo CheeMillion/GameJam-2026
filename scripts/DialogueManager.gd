@@ -1,18 +1,4 @@
 extends CanvasLayer
-## Autoload named "DialogueManager". Logic only, no built-in visuals.
-##
-## Each box scene needs:
-##   - a Label with Unique Name  Text
-##   - (optional) a Control with Unique Name  Arrow
-##   - (optional) a TextureRect with Unique Name  Portrait   <- shows the NPC face
-##
-## PORTRAIT FILES: named  <character>_<emotion>.png, anywhere inside PORTRAIT_FOLDER
-##   (subfolders are fine).  e.g.  mom_neutral.png, mom_happy.png, dad_angry2.png
-##
-## LINE FORMAT (what you type in the Inspector):
-##   Hello there.              -> uses the current emotion (starts as "neutral")
-##   [sad] I miss her.         -> switches emotion to sad (stays sad until changed)
-##   [dad:angry] Get out.      -> switches speaker to dad AND emotion to angry
 
 signal dialogue_started
 signal dialogue_finished
@@ -23,11 +9,22 @@ const BOX_SCENE_PATHS := [
 	"res://scenes/my_dialogue_box3.tscn",
 	"res://scenes/my_dialogue_box4.tscn",
 ]
-# Searches this folder AND all subfolders for portraits, so no need to move files.
-const PORTRAIT_FOLDER := "res://assets/character sprites"   # <-- CHANGE if yours is different
+
+const PORTRAIT_FOLDER := "res://assets/character sprites"  
 const DEFAULT_EMOTION := "neutral"
 const CHARS_PER_SEC := 30.0
 const PREFIX := ""
+
+const VOICE_EVERY_N_CHARS := 2
+const VOICE_VOLUME_DB := -6.0
+const VOICE_PITCH_VARIATION := 0.08
+const VOICE_PITCH := {
+	"mom": 1.0,
+	"dad": 0.7,
+	"daniel": 1.1,
+	"mae": 1.3,
+	"princess": 1.5,
+}
 
 var is_active := false
 
@@ -44,6 +41,8 @@ var _start_frame := -1
 var _tween: Tween
 
 var _speaker := ""
+var _voice := ""
+var _voice_pitch := 1.0
 var _emotion := DEFAULT_EMOTION
 var _portrait_files := {}   # "mom_happy" -> "res://.../mom_happy.png"
 var _tag_regex := RegEx.create_from_string("^\\[(?:(\\w+):)?(\\w+)\\]\\s*([\\s\\S]*)$")
@@ -72,8 +71,7 @@ func _ready() -> void:
 			push_error("DialogueManager: " + path + " needs a Label with Unique Name 'Text'.")
 
 
-## lines: Array of Strings. box_style: 1 to 4. speaker: character name for portraits ("" = no portrait).
-func start(lines: Array, box_style: int = 1, speaker: String = "") -> void:
+func start(lines: Array, box_style: int = 1, speaker: String = "", voice: String = "", voice_pitch: float = 1.0) -> void:
 	if is_active or lines.is_empty():
 		return
 	_current = clampi(box_style - 1, 0, BOX_SCENE_PATHS.size() - 1)
@@ -83,6 +81,8 @@ func start(lines: Array, box_style: int = 1, speaker: String = "") -> void:
 	_lines = lines
 	_index = 0
 	_speaker = speaker
+	_voice = voice
+	_voice_pitch = voice_pitch
 	_emotion = DEFAULT_EMOTION
 	is_active = true
 	_start_frame = Engine.get_process_frames()
@@ -98,6 +98,7 @@ func _show_line() -> void:
 	if m:
 		if m.get_string(1) != "":
 			_speaker = m.get_string(1)
+			_voice = ""
 		_emotion = m.get_string(2)
 		body = m.get_string(3)
 	_update_portrait()
@@ -112,9 +113,26 @@ func _show_line() -> void:
 	if _tween:
 		_tween.kill()
 	_tween = create_tween()
-	_tween.tween_property(label, "visible_characters", text.length(), text.length() / CHARS_PER_SEC)
+	_tween.tween_method(_on_char_shown, 0, text.length(), text.length() / CHARS_PER_SEC)
 	_tween.finished.connect(_on_typing_done)
-	# Hook: play a text blip sound here if you want.
+
+
+func _on_char_shown(value) -> void:
+	var count: int = int(value)
+	var label: Label = _labels[_current]
+	if count == label.visible_characters or count < 1 or count > label.text.length():
+		return
+	label.visible_characters = count
+	var ch: String = label.text[count - 1]
+	if ch in " .,!?-\n" or count % VOICE_EVERY_N_CHARS != 0:
+		return
+	var voice: String = _voice if _voice != "" else _speaker.to_lower() + "_voice"
+	if not SFX.has_sound(voice):
+		voice = "voice_default"
+		if not SFX.has_sound(voice):
+			return
+	var pitch: float = _voice_pitch if _voice != "" else VOICE_PITCH.get(_speaker.to_lower(), 1.0)
+	SFX.play(voice, VOICE_VOLUME_DB, VOICE_PITCH_VARIATION, pitch)
 
 
 func _update_portrait() -> void:
@@ -140,7 +158,6 @@ func _scan_portraits(folder: String) -> void:
 	for sub in dir.get_directories():
 		_scan_portraits(folder.path_join(sub))
 	for file in dir.get_files():
-		# Exported games list "x.png.import" instead of "x.png", so handle both.
 		var fname: String = file.trim_suffix(".import")
 		if fname.get_extension().to_lower() == "png":
 			_portrait_files[fname.get_basename().to_lower()] = folder.path_join(fname)
@@ -185,7 +202,7 @@ func _end() -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if not is_active:
 		return
-	# Ignore the same keypress that opened the dialogue.
+
 	if Engine.get_process_frames() == _start_frame:
 		return
 	if event.is_action_pressed("interact"):

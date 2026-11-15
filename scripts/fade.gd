@@ -12,6 +12,7 @@ func _ready() -> void:
 	add_child(rect)
 
 func fade_out(duration := 0.3) -> void:
+	SFX.play("door")
 	var t := create_tween()
 	t.tween_property(rect, "modulate:a", 1.0, duration)
 	await t.finished
