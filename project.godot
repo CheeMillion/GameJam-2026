@@ -21,6 +21,10 @@ Fade="*uid://ctwcsgkbx6cuj"
 GameManager="*uid://om4o1tuchuf6"
 Dialogue="*uid://ditdu27vh6um6"
 DialogueManager="*uid://dpbp6uupbjh34"
+<<<<<<< HEAD
+=======
+MissionLog="*res://scenes/mission_log.tscn"
+>>>>>>> parent of 3e51909 (msuic)
 
 [display]
 
