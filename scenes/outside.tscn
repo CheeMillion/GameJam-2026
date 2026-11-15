@@ -14,6 +14,9 @@ size = Vector2(135, 2298)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vicex"]
 size = Vector2(4144, 355)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_aui74"]
+radius = 81.055534
+
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vicex"]
 particle_flag_disable_z = true
 emission_shape = 3
@@ -27,7 +30,7 @@ scale_min = 0.5
 scale_max = 1.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77to7"]
-size = Vector2(1664, 57)
+size = Vector2(928, 48.5)
 
 [node name="outside" type="Area2D" unique_id=950064928]
 metadata/_edit_vertical_guides_ = [6802.0, 10642.0]
@@ -69,6 +72,10 @@ script = ExtResource("2_nsm10")
 position = Vector2(-1.315, 0)
 polygon = PackedVector2Array(6407.315, 1413, 7530.315, 1403, 7835.315, 1807, 7854.315, 2121, 6342.315, 2121, 6336.315, 1393)
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D" unique_id=38194793]
+position = Vector2(8454, 1316)
+shape = SubResource("CircleShape2D_aui74")
+
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" unique_id=1588070764]
 polygon = PackedVector2Array(8419, 1593, 8567, 1452, 10188, 1467, 10188, 2126, 8419, 2118, 8441, 1800, 8397, 1748)
 
@@ -86,6 +93,9 @@ position = Vector2(6876, 1311)
 [node name="CollisionShape2D" parent="Dog" index="1" unique_id=163234598]
 position = Vector2(9, -2)
 
+[node name="Dog2" parent="." unique_id=1992537941 instance=ExtResource("1_8lkp2")]
+position = Vector2(8200, 2055)
+
 [node name="Dogtrigger" type="Area2D" parent="." unique_id=768919536 node_paths=PackedStringArray("dog")]
 position = Vector2(6878, 1311)
 script = ExtResource("4_udpx5")
@@ -93,6 +103,15 @@ dog = NodePath("../Dog")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dogtrigger" unique_id=280742568]
 position = Vector2(752, -190)
+shape = SubResource("RectangleShape2D_77to7")
+
+[node name="Dogtrigger2" type="Area2D" parent="." unique_id=698454846 node_paths=PackedStringArray("dog")]
+position = Vector2(6771, 1311)
+script = ExtResource("4_udpx5")
+dog = NodePath("../Dog")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Dogtrigger2" unique_id=1752088518]
+position = Vector2(1724, 559.75)
 shape = SubResource("RectangleShape2D_77to7")
 
 [editable path="Dog"]
