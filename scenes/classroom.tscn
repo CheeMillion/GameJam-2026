@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://dh27au414huj7"]
+
+[ext_resource type="Texture2D" uid="uid://bbxv4wbele8iy" path="res://assets/background/Classroom_base.png" id="1_w75qy"]
+[ext_resource type="Texture2D" uid="uid://kskb7dwphdb2" path="res://assets/object item sprites/school chair bottom.png" id="2_x5cc4"]
+[ext_resource type="Texture2D" uid="uid://cotvuwc2nvp6g" path="res://assets/object item sprites/school tables.png" id="3_kkrti"]
+[ext_resource type="Texture2D" uid="uid://cykqh2gb378j8" path="res://assets/object item sprites/school chair top.png" id="4_xubko"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(1116, 471)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
+size = Vector2(107, 1665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vicex"]
+size = Vector2(22, 1668)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_77to7"]
+size = Vector2(758, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1pkoy"]
+size = Vector2(119, 49)
+
+[node name="classroom" type="Area2D" unique_id=614896452]
+position = Vector2(11882, 1013)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=149451042]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1203277643]
+position = Vector2(11875, 1007)
+
+[node name="TextureRect" type="TextureRect" parent="ParallaxBackground/ParallaxLayer" unique_id=1651145856]
+offset_left = -428.0
+offset_top = -195.0
+offset_right = 1492.0
+offset_bottom = 1965.0
+texture = ExtResource("1_w75qy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1027292258]
+position = Vector2(548, 225.5)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=608921833]
+position = Vector2(-48.5, 822.5)
+shape = SubResource("RectangleShape2D_aui74")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1975654921]
+position = Vector2(1081, 824)
+shape = SubResource("RectangleShape2D_vicex")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1002674356]
+position = Vector2(718, 1667)
+shape = SubResource("RectangleShape2D_77to7")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=283587882]
+position = Vector2(49.5, 1645.5)
+shape = SubResource("RectangleShape2D_1pkoy")
+
+[node name="SchoolChairBottom" type="Sprite2D" parent="." unique_id=492592591]
+position = Vector2(152, 1059)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolTables" type="Sprite2D" parent="." unique_id=1172817337]
+position = Vector2(531, 957.50006)
+scale = Vector2(1, 1.0675148)
+texture = ExtResource("3_kkrti")
+
+[node name="SchoolChairTop" type="Sprite2D" parent="." unique_id=1749819150]
+position = Vector2(149, 1040)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom2" type="Sprite2D" parent="." unique_id=1311636476]
+position = Vector2(532, 1017)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop2" type="Sprite2D" parent="." unique_id=253623519]
+position = Vector2(532, 990)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom3" type="Sprite2D" parent="." unique_id=1505799032]
+position = Vector2(823, 1039)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop3" type="Sprite2D" parent="." unique_id=1399990450]
+position = Vector2(822, 1017)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom4" type="Sprite2D" parent="." unique_id=801206731]
+position = Vector2(84, 754)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop4" type="Sprite2D" parent="." unique_id=2044842226]
+position = Vector2(78, 737)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom5" type="Sprite2D" parent="." unique_id=1662864605]
+position = Vector2(895, 730)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop5" type="Sprite2D" parent="." unique_id=531467139]
+position = Vector2(894, 713)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom6" type="Sprite2D" parent="." unique_id=1882276023]
+position = Vector2(538, 717)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop6" type="Sprite2D" parent="." unique_id=505315200]
+position = Vector2(538, 702)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom7" type="Sprite2D" parent="." unique_id=157219917]
+position = Vector2(965, 1378)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop7" type="Sprite2D" parent="." unique_id=898417824]
+position = Vector2(969, 1350)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom8" type="Sprite2D" parent="." unique_id=701618319]
+position = Vector2(551, 1345)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop8" type="Sprite2D" parent="." unique_id=846787793]
+position = Vector2(553, 1325)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom9" type="Sprite2D" parent="." unique_id=564038880]
+position = Vector2(156, 1306)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop9" type="Sprite2D" parent="." unique_id=2013601255]
+position = Vector2(160, 1289)
+texture = ExtResource("4_xubko")
