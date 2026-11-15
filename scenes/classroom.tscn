@@ -5,22 +5,25 @@
 [ext_resource type="Texture2D" uid="uid://cotvuwc2nvp6g" path="res://assets/object item sprites/school tables.png" id="3_kkrti"]
 [ext_resource type="Texture2D" uid="uid://cykqh2gb378j8" path="res://assets/object item sprites/school chair top.png" id="4_xubko"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
-size = Vector2(1116, 471)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
-size = Vector2(107, 1665)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vicex"]
 size = Vector2(22, 1668)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_77to7"]
 size = Vector2(758, 85)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aui74"]
+size = Vector2(107, 1665)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(1116, 471)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1pkoy"]
 size = Vector2(119, 49)
 
-[node name="classroom" type="Area2D" unique_id=614896452]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nhfc8"]
+size = Vector2(264, 227.5)
+
+[node name="classroom" type="Node2D" unique_id=888609053]
 position = Vector2(11882, 1013)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=149451042]
@@ -35,99 +38,136 @@ offset_right = 1492.0
 offset_bottom = 1965.0
 texture = ExtResource("1_w75qy")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1027292258]
-position = Vector2(548, 225.5)
-shape = SubResource("RectangleShape2D_lfkbx")
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=608921833]
-position = Vector2(-48.5, 822.5)
-shape = SubResource("RectangleShape2D_aui74")
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1975654921]
-position = Vector2(1081, 824)
-shape = SubResource("RectangleShape2D_vicex")
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1002674356]
-position = Vector2(718, 1667)
-shape = SubResource("RectangleShape2D_77to7")
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="." unique_id=283587882]
-position = Vector2(49.5, 1645.5)
-shape = SubResource("RectangleShape2D_1pkoy")
-
-[node name="SchoolChairBottom" type="Sprite2D" parent="." unique_id=492592591]
-position = Vector2(152, 1059)
-texture = ExtResource("2_x5cc4")
-
-[node name="SchoolTables" type="Sprite2D" parent="." unique_id=1172817337]
-position = Vector2(531, 957.50006)
+[node name="SchoolTables" type="TextureRect" parent="ParallaxBackground/ParallaxLayer" unique_id=1251681015]
+offset_left = -64.0
+offset_top = 420.0
+offset_right = 1140.0
+offset_bottom = 1442.0
 scale = Vector2(1, 1.0675148)
 texture = ExtResource("3_kkrti")
 
-[node name="SchoolChairTop" type="Sprite2D" parent="." unique_id=1749819150]
-position = Vector2(149, 1040)
-texture = ExtResource("4_xubko")
-
-[node name="SchoolChairBottom2" type="Sprite2D" parent="." unique_id=1311636476]
-position = Vector2(532, 1017)
+[node name="SchoolChairBottom" type="TextureRect" parent="ParallaxBackground/ParallaxLayer" unique_id=1854092183]
+offset_left = 96.0
+offset_top = 963.0
+offset_right = 215.0
+offset_bottom = 1147.0
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop2" type="Sprite2D" parent="." unique_id=253623519]
-position = Vector2(532, 990)
+[node name="SchoolChairTop" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1749819150]
+position = Vector2(156, 1046)
 texture = ExtResource("4_xubko")
 
-[node name="SchoolChairBottom3" type="Sprite2D" parent="." unique_id=1505799032]
-position = Vector2(823, 1039)
+[node name="SchoolChairBottom2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1311636476]
+position = Vector2(539, 1023)
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop3" type="Sprite2D" parent="." unique_id=1399990450]
-position = Vector2(822, 1017)
+[node name="SchoolChairTop2" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=253623519]
+position = Vector2(539, 996)
 texture = ExtResource("4_xubko")
 
-[node name="SchoolChairBottom4" type="Sprite2D" parent="." unique_id=801206731]
-position = Vector2(84, 754)
+[node name="SchoolChairBottom3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1505799032]
+position = Vector2(830, 1045)
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop4" type="Sprite2D" parent="." unique_id=2044842226]
-position = Vector2(78, 737)
+[node name="SchoolChairTop3" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1399990450]
+position = Vector2(829, 1023)
 texture = ExtResource("4_xubko")
 
-[node name="SchoolChairBottom5" type="Sprite2D" parent="." unique_id=1662864605]
-position = Vector2(895, 730)
+[node name="SchoolChairBottom4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=801206731]
+position = Vector2(91, 760)
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop5" type="Sprite2D" parent="." unique_id=531467139]
-position = Vector2(894, 713)
-texture = ExtResource("4_xubko")
-
-[node name="SchoolChairBottom6" type="Sprite2D" parent="." unique_id=1882276023]
-position = Vector2(538, 717)
+[node name="SchoolChairBottom5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1662864605]
+position = Vector2(902, 736)
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop6" type="Sprite2D" parent="." unique_id=505315200]
-position = Vector2(538, 702)
+[node name="SchoolChairTop5" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=531467139]
+position = Vector2(901, 719)
 texture = ExtResource("4_xubko")
 
-[node name="SchoolChairBottom7" type="Sprite2D" parent="." unique_id=157219917]
-position = Vector2(965, 1378)
+[node name="SchoolChairTop4" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=2044842226]
+position = Vector2(85, 743)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairTop6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=505315200]
+position = Vector2(545, 708)
+texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom6" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1882276023]
+position = Vector2(545, 723)
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop7" type="Sprite2D" parent="." unique_id=898417824]
-position = Vector2(969, 1350)
-texture = ExtResource("4_xubko")
-
-[node name="SchoolChairBottom8" type="Sprite2D" parent="." unique_id=701618319]
-position = Vector2(551, 1345)
+[node name="SchoolChairBottom7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=157219917]
+position = Vector2(972, 1384)
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop8" type="Sprite2D" parent="." unique_id=846787793]
-position = Vector2(553, 1325)
+[node name="SchoolChairTop7" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=898417824]
+position = Vector2(976, 1356)
 texture = ExtResource("4_xubko")
 
-[node name="SchoolChairBottom9" type="Sprite2D" parent="." unique_id=564038880]
-position = Vector2(156, 1306)
+[node name="SchoolChairBottom8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=701618319]
+position = Vector2(558, 1351)
 texture = ExtResource("2_x5cc4")
 
-[node name="SchoolChairTop9" type="Sprite2D" parent="." unique_id=2013601255]
-position = Vector2(160, 1289)
+[node name="SchoolChairTop8" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=846787793]
+position = Vector2(560, 1331)
 texture = ExtResource("4_xubko")
+
+[node name="SchoolChairBottom9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=564038880]
+position = Vector2(163, 1312)
+texture = ExtResource("2_x5cc4")
+
+[node name="SchoolChairTop9" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=2013601255]
+position = Vector2(167, 1295)
+texture = ExtResource("4_xubko")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=181792306]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1975654921]
+position = Vector2(1081, 824)
+shape = SubResource("RectangleShape2D_vicex")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1002674356]
+position = Vector2(718, 1667)
+shape = SubResource("RectangleShape2D_77to7")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=608921833]
+position = Vector2(-48.5, 822.5)
+shape = SubResource("RectangleShape2D_aui74")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1027292258]
+position = Vector2(548, 225.5)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=283587882]
+position = Vector2(49.5, 1645.5)
+shape = SubResource("RectangleShape2D_1pkoy")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1964897787]
+position = Vector2(159, 682)
+shape = SubResource("RectangleShape2D_nhfc8")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=440547690]
+position = Vector2(159, 682)
+polygon = PackedVector2Array(610, -123, 867, -119, 864, 103, 603, 107)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1207432338]
+polygon = PackedVector2Array(404, 556, 668, 559, 662, 776, 568, 773, 495, 773, 414, 782)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=2003259779]
+polygon = PackedVector2Array(28, 839, 34, 1080, 113, 1077, 119, 1118, 188, 1115, 204, 1068, 291, 1084, 288, 833)
+
+[node name="CollisionPolygon2D5" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=653142377]
+polygon = PackedVector2Array(762, 836, 762, 1062, 797, 1102, 866, 1093, 875, 1062, 1020, 1074, 1020, 826)
+
+[node name="CollisionPolygon2D4" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=179305097]
+polygon = PackedVector2Array(404, 833, 404, 989, 487, 997, 498, 1071, 574, 1071, 571, 994, 662, 1026, 665, 836)
+
+[node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=157234765]
+polygon = PackedVector2Array(35, 1134, 37, 1356, 123, 1366, 195, 1370, 292, 1364, 292, 1132)
+
+[node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1709804647]
+polygon = PackedVector2Array(411, 1132, 413, 1368, 505, 1364, 524, 1405, 585, 1409, 610, 1356, 668, 1358, 670, 1122)
+
+[node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=377142515]
+polygon = PackedVector2Array(768, 1130, 766, 1354, 928, 1354, 931, 1440, 1009, 1438, 1021, 1356, 1023, 1132)

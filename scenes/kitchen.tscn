@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://dwktpmg4em8i1"]
 
 [ext_resource type="Texture2D" uid="uid://cm5xhwoix7ple" path="res://assets/background/kitchen_night.png" id="1_7ilqw"]
-[ext_resource type="Script" uid="uid://1eeu2el1ubw4" path="res://scenes/kitchen.gd" id="1_mrp8g"]
+[ext_resource type="Script" uid="uid://1eeu2el1ubw4" path="res://scripts/kitchen.gd" id="1_mrp8g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
 size = Vector2(639, 413.5)
@@ -65,5 +65,5 @@ position = Vector2(3197, 1657)
 shape = SubResource("RectangleShape2D_sa112")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2037995513]
-position = Vector2(2726.5, 1653.5)
+position = Vector2(2700, 1652)
 shape = SubResource("RectangleShape2D_nhfc8")

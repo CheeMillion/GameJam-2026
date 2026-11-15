@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bnautgycfo7tk"
-path="res://.godot/imported/sprite 5.png-be38e739572da6a653cba51a779004c8.ctex"
+path="res://.godot/imported/mc_annoyed.png-e57980c5757f2ddfc6a0759a5c4db876.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/MC sprite/sprite 5.png"
-dest_files=["res://.godot/imported/sprite 5.png-be38e739572da6a653cba51a779004c8.ctex"]
+source_file="res://assets/character sprites/portraits/MC sprite/mc_annoyed.png"
+dest_files=["res://.godot/imported/mc_annoyed.png-e57980c5757f2ddfc6a0759a5c4db876.ctex"]
 
 [params]
 

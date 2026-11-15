@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bsnlud6chheps"
-path="res://.godot/imported/sprite 9.png-a6fa9ec87d40376dccb88e14efd186b2.ctex"
+uid="uid://bv6cu6p6oaojo"
+path="res://.godot/imported/mc_happy2.png-f3cf055a54011e36b56aaf7121429725.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/MC sprite/sprite 9.png"
-dest_files=["res://.godot/imported/sprite 9.png-a6fa9ec87d40376dccb88e14efd186b2.ctex"]
+source_file="res://assets/character sprites/portraits/MC sprite/mc_happy2.png"
+dest_files=["res://.godot/imported/mc_happy2.png-f3cf055a54011e36b56aaf7121429725.ctex"]
 
 [params]
 

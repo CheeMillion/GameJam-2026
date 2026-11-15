@@ -149,12 +149,12 @@ polygon = PackedVector2Array(436.68427, 424.0644, 386.73364, 424.0644, 279.68427
 position = Vector2(606, 76)
 script = ExtResource("13_kvuet")
 lines = Array[String](["Hello!"])
-repeat_lines = Array[String]([" I am a drawer."])
+repeat_lines = Array[String](["[black]  I am a drawer."])
+box_style = 3
+speaker = "dad"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1518700088]
 shape = SubResource("RectangleShape2D_sa112")
-
-[node name="classroom" parent="." unique_id=614896452 instance=ExtResource("14_trtic")]
 
 [node name="teleporter7" parent="." unique_id=750235602 instance=ExtResource("4_7jktm")]
 position = Vector2(10624, 1363)
@@ -172,6 +172,7 @@ rotation = -1.579523
 [node name="DestinationPoint" parent="teleporter7/teleporter" index="0" unique_id=880137768]
 position = Vector2(1291.2593, -1513.7894)
 
+[node name="classroom" parent="." unique_id=614896452 instance=ExtResource("14_trtic")]
 [node name="Daddy" type="Area2D" parent="." unique_id=1382880592]
 position = Vector2(5147, 544)
 script = ExtResource("13_kvuet")
@@ -197,3 +198,4 @@ shape = SubResource("CircleShape2D_xrivr")
 [editable path="teleporter6"]
 [editable path="teleporter7"]
 [editable path="teleporter7/teleporter"]
+[editable path="classroom"]
