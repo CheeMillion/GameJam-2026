@@ -175,8 +175,8 @@ position = Vector2(1291.2593, -1513.7894)
 [node name="Daddy" type="Area2D" parent="." unique_id=1382880592]
 position = Vector2(5147, 544)
 script = ExtResource("13_kvuet")
-lines = Array[String](["Hays"])
-repeat_lines = Array[String](["Nigger"])
+lines = Array[String]( ["Go to the kitchen nak, your mom wants to talk to you"] )
+after_mother_lines = Array[String]( ["I hope you studied for your test"] )
 speaker = "dad"
 
 [node name="Sprite2D" type="Sprite2D" parent="Daddy" unique_id=266831205]
