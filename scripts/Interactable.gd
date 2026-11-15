@@ -18,15 +18,11 @@ extends Area2D
 ## Who is talking (picks the portrait). Choose "none" for furniture.
 ## To add a new character, add their name to this list (lowercase, same as the filename).
 @export_enum("none", "mom", "dad", "daniel", "mae", "princess") var speaker: String = "none"
-## Mark the dad NPC whose conversation should unlock the dining room teleporter.
-@export var completes_father_interaction := false
 
 var _interacted_before := false
 
 
 func interact() -> void:
-	if DialogueManager.is_active:
-		return
 	var who := "" if speaker == "none" else speaker
 	if not after_mother_lines.is_empty() and GameManager.mother_interaction_completed:
 		DialogueManager.start(after_mother_lines, box_style, who)
@@ -35,6 +31,3 @@ func interact() -> void:
 	else:
 		DialogueManager.start(lines, box_style, who)
 	_interacted_before = true
-	if completes_father_interaction:
-		await DialogueManager.dialogue_finished
-		GameManager.complete_father_interaction()
