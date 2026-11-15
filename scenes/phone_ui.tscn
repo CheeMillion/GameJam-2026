@@ -4,6 +4,13 @@
 [ext_resource type="Texture2D" uid="uid://cqa7vq35q4gbs" path="res://assets/hud sprites/renpy-phone-skin-dark-1.0/renpy-phone-skin-dark/phone_skins/dark/images/device.png" id="2_device"]
 [ext_resource type="Texture2D" uid="uid://c008oae8rbm2b" path="res://assets/hud sprites/renpy-phone-skin-dark-1.0/renpy-phone-skin-dark/phone_skins/dark/images/screen_bg.png" id="3_screen_bg"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_message"]
+bg_color = Color(0.13, 0.17, 0.22, 0.96)
+corner_radius_top_left = 18
+corner_radius_top_right = 18
+corner_radius_bottom_right = 18
+corner_radius_bottom_left = 18
+
 [node name="PhoneUI" type="CanvasLayer"]
 
 [node name="Screen" type="Control" parent="."]
@@ -28,6 +35,38 @@ mouse_filter = 2
 texture = ExtResource("3_screen_bg")
 expand_mode = 1
 stretch_mode = 0
+
+[node name="ContactHeader" type="Label" parent="Screen/Phone"]
+offset_left = 58.0
+offset_top = 74.0
+offset_right = 462.0
+offset_bottom = 126.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.93, 0.95, 1, 1)
+theme_override_fonts/font = null
+theme_override_font_sizes/font_size = 24
+text = "Mom"
+vertical_alignment = 1
+
+[node name="MessageBubble" type="Panel" parent="Screen/Phone"]
+offset_left = 48.0
+offset_top = 148.0
+offset_right = 456.0
+offset_bottom = 368.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_message")
+
+[node name="MessageText" type="Label" parent="Screen/Phone/MessageBubble"]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 16.0
+offset_right = 392.0
+offset_bottom = 204.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.94, 0.95, 0.98, 1)
+theme_override_font_sizes/font_size = 20
+text = "Come downstairs to the kitchen, please."
+autowrap_mode = 2
 
 [node name="DeviceFrame" type="TextureRect" parent="Screen/Phone"]
 offset_right = 320.0

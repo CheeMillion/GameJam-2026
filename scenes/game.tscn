@@ -15,6 +15,7 @@
 [ext_resource type="Script" uid="uid://bhu0crfo7nc5l" path="res://scripts/Interactable.gd" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://dh27au414huj7" path="res://scenes/classroom.tscn" id="14_trtic"]
 [ext_resource type="Texture2D" uid="uid://btuvyeofdxfrb" path="res://assets/character sprites/Dad-Sitting.png" id="15_ir15t"]
+[ext_resource type="Script" path="res://scripts/game_intro.gd" id="16_game_intro"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dinhu"]
 radius = 27.0
@@ -28,9 +29,9 @@ radius = 52.009613
 
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
+script = ExtResource("16_game_intro")
 
 [node name="PhoneUI" parent="." unique_id=1874434826 instance=ExtResource("8_phone_ui")]
-visible = false
 
 [node name="PauseMenu" parent="." unique_id=1370982993 instance=ExtResource("9_pause_menu")]
 
