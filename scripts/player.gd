@@ -12,7 +12,7 @@ var normal_zoom := Vector2.ONE
 var zoom_tween: Tween
 var slow_multiplier := 1.0
 var base_speed = 0
-var can_move := true
+var can_move := true   # NEW
 
 const ROOMS := {
 	"kitchen": Rect2(4022, -67, 1478, 1026),
@@ -42,7 +42,7 @@ func _ready() -> void:
 
 func _physics_process(_delta: float) -> void:
 	update_interact_area()
-	if not can_move:
+	if not can_move:   # NEW
 		velocity = Vector2.ZERO
 		play_anim(last_dir + "_idle")
 		move_and_slide()
@@ -121,6 +121,7 @@ func play_animation(dir: Vector2) -> void:
 
 	play_anim(last_dir)
 
+
 func play_anim(anim_name: String) -> void:
 	if anim_name == "right":
 		animated_sprite_2d.scale = right_scale
@@ -129,6 +130,9 @@ func play_anim(anim_name: String) -> void:
 	else:
 		animated_sprite_2d.scale = Vector2.ONE
 	animated_sprite_2d.play(anim_name)
+
+
+# ---------- INTERACTION (the missing part) ----------
 
 func update_interact_area() -> void:
 	match last_dir:

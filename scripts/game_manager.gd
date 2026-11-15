@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Node
 
 signal mother_interaction_finished
 signal family_interactions_finished
