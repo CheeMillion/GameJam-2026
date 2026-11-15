@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbideu3xca7m3"
-path="res://.godot/imported/dad sprite 2.png-126cf7afcabe2eacf6a46a314b8f0a40.ctex"
+uid="uid://djfu32q2kh1ya"
+path="res://.godot/imported/princess_talk.png-9773e25e823ca3db07281e3764e6b01f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/dad sprite/dad sprite 2.png"
-dest_files=["res://.godot/imported/dad sprite 2.png-126cf7afcabe2eacf6a46a314b8f0a40.ctex"]
+source_file="res://assets/character sprites/portraits/princess sprite/princess_talk.png"
+dest_files=["res://.godot/imported/princess_talk.png-9773e25e823ca3db07281e3764e6b01f.ctex"]
 
 [params]
 

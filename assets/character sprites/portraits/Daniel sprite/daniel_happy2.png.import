@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3ojwbe85pqa6"
-path="res://.godot/imported/sprite 5 mom.png-44a974037d5949f1badde72d3d34413c.ctex"
+uid="uid://dx2lh5vu1d2oq"
+path="res://.godot/imported/daniel_happy2.png-0d03047ffe82621832fab4165a37a01e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/Mom sprite/sprite 5 mom.png"
-dest_files=["res://.godot/imported/sprite 5 mom.png-44a974037d5949f1badde72d3d34413c.ctex"]
+source_file="res://assets/character sprites/portraits/Daniel sprite/daniel_happy2.png"
+dest_files=["res://.godot/imported/daniel_happy2.png-0d03047ffe82621832fab4165a37a01e.ctex"]
 
 [params]
 

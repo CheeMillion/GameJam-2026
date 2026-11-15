@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b34k7b0yh32ge"
-path="res://.godot/imported/dad sprite 4.png-ceba3af01951d39d31c1f34c7ae76141.ctex"
+path="res://.godot/imported/dad_black.png-b4fce3f614f2608263bd4acb5144fe97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/dad sprite/dad sprite 4.png"
-dest_files=["res://.godot/imported/dad sprite 4.png-ceba3af01951d39d31c1f34c7ae76141.ctex"]
+source_file="res://assets/character sprites/portraits/dad sprite/dad_black.png"
+dest_files=["res://.godot/imported/dad_black.png-b4fce3f614f2608263bd4acb5144fe97.ctex"]
 
 [params]
 

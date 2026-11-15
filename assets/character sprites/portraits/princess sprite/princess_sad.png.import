@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://djfu32q2kh1ya"
-path="res://.godot/imported/princess sprite 4.png-2ecb2f1bf22ecef74a71b6f98817c7b6.ctex"
+uid="uid://4p45xudps0s3"
+path="res://.godot/imported/princess_sad.png-8b09a42d21453e87f5f4da77c14f5bf4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/princess sprite/princess sprite 4.png"
-dest_files=["res://.godot/imported/princess sprite 4.png-2ecb2f1bf22ecef74a71b6f98817c7b6.ctex"]
+source_file="res://assets/character sprites/portraits/princess sprite/princess_sad.png"
+dest_files=["res://.godot/imported/princess_sad.png-8b09a42d21453e87f5f4da77c14f5bf4.ctex"]
 
 [params]
 

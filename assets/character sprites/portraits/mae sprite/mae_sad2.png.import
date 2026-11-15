@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx2lh5vu1d2oq"
-path="res://.godot/imported/daniel sprite 2.png-288bb9ff0588bb18953cfa7ae23d9214.ctex"
+uid="uid://c2lr664chwd8l"
+path="res://.godot/imported/mae_sad2.png-7f732af0ea3869eb847cb16ba106b104.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/Daniel sprite/daniel sprite 2.png"
-dest_files=["res://.godot/imported/daniel sprite 2.png-288bb9ff0588bb18953cfa7ae23d9214.ctex"]
+source_file="res://assets/character sprites/portraits/mae sprite/mae_sad2.png"
+dest_files=["res://.godot/imported/mae_sad2.png-7f732af0ea3869eb847cb16ba106b104.ctex"]
 
 [params]
 

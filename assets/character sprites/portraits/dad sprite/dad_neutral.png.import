@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfjh2dv7dpwhm"
-path="res://.godot/imported/sprite 3 mom.png-182f918d8e455f0ea726f195ce7953f8.ctex"
+uid="uid://u5eldgp6sdpw"
+path="res://.godot/imported/dad_neutral.png-b4f5900c61c9380ca59fb7047a986079.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/Mom sprite/sprite 3 mom.png"
-dest_files=["res://.godot/imported/sprite 3 mom.png-182f918d8e455f0ea726f195ce7953f8.ctex"]
+source_file="res://assets/character sprites/portraits/dad sprite/dad_neutral.png"
+dest_files=["res://.godot/imported/dad_neutral.png-b4f5900c61c9380ca59fb7047a986079.ctex"]
 
 [params]
 
