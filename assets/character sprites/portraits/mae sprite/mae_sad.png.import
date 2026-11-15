@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctojrbrhbto6r"
-path="res://.godot/imported/mae sprite 3.png-ff0469208ae6879cabb698d20a45376e.ctex"
+uid="uid://bm08b7dy8kquv"
+path="res://.godot/imported/mae_sad.png-844fa93105023f463c6c846fffe0fa0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/mae sprite/mae sprite 3.png"
-dest_files=["res://.godot/imported/mae sprite 3.png-ff0469208ae6879cabb698d20a45376e.ctex"]
+source_file="res://assets/character sprites/portraits/mae sprite/mae_sad.png"
+dest_files=["res://.godot/imported/mae_sad.png-844fa93105023f463c6c846fffe0fa0c.ctex"]
 
 [params]
 

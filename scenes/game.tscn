@@ -145,7 +145,7 @@ polygon = PackedVector2Array(436.68427, 424.0644, 386.73364, 424.0644, 279.68427
 position = Vector2(606, 76)
 script = ExtResource("13_kvuet")
 lines = Array[String](["Hello!"])
-repeat_lines = Array[String](["YOU NIGGER", "you chigger", "", "", ""])
+repeat_lines = Array[String]([" I am a drawer."])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1518700088]
 shape = SubResource("RectangleShape2D_sa112")

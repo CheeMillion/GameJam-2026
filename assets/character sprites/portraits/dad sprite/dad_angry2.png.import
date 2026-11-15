@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cvutquj18g4fb"
-path="res://.godot/imported/mae sprite 1.png-d7b4d6f35e9eb903db1857dfbbc346c4.ctex"
+uid="uid://csldbj4stb5ky"
+path="res://.godot/imported/dad_angry2.png-684be7b1de27a2586b7459ea2722b9f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/character sprites/portraits/mae sprite/mae sprite 1.png"
-dest_files=["res://.godot/imported/mae sprite 1.png-d7b4d6f35e9eb903db1857dfbbc346c4.ctex"]
+source_file="res://assets/character sprites/portraits/dad sprite/dad_angry2.png"
+dest_files=["res://.godot/imported/dad_angry2.png-684be7b1de27a2586b7459ea2722b9f2.ctex"]
 
 [params]
 
