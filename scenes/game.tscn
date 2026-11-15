@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dwvnqu0iq2pyy" path="res://assets/background/Screenshot 2026-11-15 034817.png" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://bhu0crfo7nc5l" path="res://scripts/Interactable.gd" id="13_kvuet"]
 [ext_resource type="PackedScene" uid="uid://dh27au414huj7" path="res://scenes/classroom.tscn" id="14_trtic"]
+[ext_resource type="Texture2D" uid="uid://btuvyeofdxfrb" path="res://assets/character sprites/Dad-Sitting.png" id="15_ir15t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dinhu"]
 radius = 27.0
@@ -21,6 +22,9 @@ height = 64.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sa112"]
 size = Vector2(186, 114)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 52.009613
 
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
@@ -167,6 +171,21 @@ rotation = -1.579523
 position = Vector2(1291.2593, -1513.7894)
 
 [node name="classroom" parent="." unique_id=614896452 instance=ExtResource("14_trtic")]
+[node name="Daddy" type="Area2D" parent="." unique_id=1382880592]
+position = Vector2(5147, 544)
+script = ExtResource("13_kvuet")
+lines = Array[String](["Hays"])
+repeat_lines = Array[String](["Nigger"])
+speaker = "dad"
+
+[node name="Sprite2D" type="Sprite2D" parent="Daddy" unique_id=266831205]
+position = Vector2(-22, -54)
+scale = Vector2(0.8642569, 1.0234376)
+texture = ExtResource("15_ir15t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Daddy" unique_id=448797370]
+position = Vector2(-9, 24)
+shape = SubResource("CircleShape2D_xrivr")
 
 [editable path="Dining"]
 [editable path="teleporter"]
