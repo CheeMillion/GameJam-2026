@@ -22,6 +22,10 @@ func fade_in(duration := 0.3) -> void:
 	t.tween_property(rect, "modulate:a", 0.0, duration)
 	await t.finished
 
+func play_intro(duration := 3.0) -> void:
+	rect.modulate.a = 1.0
+	await fade_in(duration)
+
 func travel(move_callable: Callable, duration := 0.3) -> void:
 	await fade_out(duration)
 	move_callable.call()
