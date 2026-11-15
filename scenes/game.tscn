@@ -150,8 +150,6 @@ repeat_lines = Array[String]([" I am a drawer."])
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1518700088]
 shape = SubResource("RectangleShape2D_sa112")
 
-[node name="classroom" parent="." unique_id=614896452 instance=ExtResource("14_trtic")]
-
 [node name="teleporter7" parent="." unique_id=750235602 instance=ExtResource("4_7jktm")]
 position = Vector2(10624, 1363)
 
@@ -168,6 +166,8 @@ rotation = -1.579523
 [node name="DestinationPoint" parent="teleporter7/teleporter" index="0" unique_id=880137768]
 position = Vector2(1291.2593, -1513.7894)
 
+[node name="classroom" parent="." unique_id=614896452 instance=ExtResource("14_trtic")]
+
 [editable path="Dining"]
 [editable path="teleporter"]
 [editable path="teleporter2"]
@@ -177,3 +177,4 @@ position = Vector2(1291.2593, -1513.7894)
 [editable path="teleporter6"]
 [editable path="teleporter7"]
 [editable path="teleporter7/teleporter"]
+[editable path="classroom"]
