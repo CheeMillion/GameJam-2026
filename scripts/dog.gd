@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var SPEED := 350.0
+@export var SPEED := 400.0
 @export var FOLLOW_DISTANCE := 50.0
 
 var player: Node2D = null
