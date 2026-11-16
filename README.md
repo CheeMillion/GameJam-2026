@@ -46,24 +46,24 @@
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠛⠻⠿⢿⣿⣿⣿⣿⣿⣿⣿⣿⣿⠿⠁⠈⠉⠉⠉⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠉⠉⠛⠉⠉⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
 ```
-##Highest Honor
+## Highest Honor
 A game built with creativity, teamwork, and dedication.
 
-#Highest Honor is a game development project created using the Godot Engine. This repository contains the game's source files, scenes, scripts, assets, and other resources used throughout development.
+# Highest Honor is a game development project created using the Godot Engine. This repository contains the game's source files, scenes, scripts, assets, and other resources used throughout development.
 
-##About the Game
+## About the Game
 Highest Honor is a collaborative game development project focused on creating an engaging gaming experience through interactive gameplay, environments, characters, and storytelling.
 
 This project is developed by a team of developers working together to design, implement, and improve different aspects of the game.
-##Features
-#Features are subject to change as development progresses.
+## Features
+# Features are subject to change as development progresses.
 - Interactive Gameplay — Explore and interact with different elements of the game.
 - Character System — Control characters and implement character-related mechanics.
 - Environment Design — Experience different environments and locations.
 - Game Interactions — Interact with objects, characters, and other gameplay elements.
 - Custom UI — Navigate through the game's user interface.
 
-##Built With
+## Built With
 Technology	Purpose
 Godot Engine	Game development engine
 GDScript	Game logic and scripting
@@ -71,11 +71,11 @@ Git	Version control
 GitHub	Collaboration and project management🚀 Getting Started
 Follow these steps to get a local copy of Highest Honor running on your computer.
 
-##Prerequisites
+## Prerequisites
 - Godot Engine
 - Git
 - A GitHub account
-##Installation
+## Installation
 
 1. Clone the repository
 git clone <repository-url>
@@ -90,7 +90,7 @@ cd Highest-Honor
 4. Run the game
 
 Press F6 to run the current scene or F5 to run the main project scene.
-##Controls
+## Controls
 Action	Key
 Move Up	W / Arrow Up
 Move Down	S / Arrow Down
@@ -98,7 +98,7 @@ Move Left	A / Arrow Left
 Move Right	D / Arrow Right
 Interact	E
 Pause	ESCControls may change during development.
-##Project Structure
+## Project Structure
 The project is organized into folders to keep scenes, scripts, and resources manageable.
 Highest-Honor/
 │
@@ -113,7 +113,7 @@ Highest-Honor/
 ├── CONTRIBUTING.md  # Contribution guidelines
 └── .gitignore       # Files excluded from Git
 The structure above is a suggested organization. Adjust it to match the actual repository.
-##Contributors
+## Contributors
 Highest Honor is developed through teamwork and collaboration.
 
 We welcome contributions from everyone involved in the project.
