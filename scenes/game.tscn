@@ -36,6 +36,12 @@ size = Vector2(1075, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
 size = Vector2(592.75, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ynku"]
+size = Vector2(6698, 3296)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxe77"]
+size = Vector2(1441, 1976.5)
+
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
 
@@ -239,6 +245,7 @@ shape = SubResource("RectangleShape2D_ir15t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DiaTeacher2" unique_id=141295785]
 position = Vector2(1132.625, 2114)
 shape = SubResource("RectangleShape2D_lfkbx")
+
 [node name="HomeMusic" type="Area2D" parent="." unique_id=1747046326]
 script = ExtResource("16_ca42v")
 song = "home_good"
