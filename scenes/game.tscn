@@ -54,7 +54,7 @@ position = Vector2(-2, 0)
 
 [node name="player" parent="." unique_id=1908451884 instance=ExtResource("1_80nbo")]
 y_sort_enabled = true
-position = Vector2(985, 282)
+position = Vector2(1021, 257)
 
 [node name="Dining" parent="." unique_id=74292362 instance=ExtResource("3_fc0e3")]
 
@@ -163,11 +163,8 @@ polygon = PackedVector2Array(436.68427, 424.0644, 386.73364, 424.0644, 279.68427
 [node name="Area2D" type="Area2D" parent="." unique_id=1709750553]
 position = Vector2(606, 76)
 script = ExtResource("13_kvuet")
-voice = null
-voice_pitch = null
 lines = Array[String](["Hello!"])
 repeat_lines = Array[String](["[black]  I am a drawer."])
-after_mother_lines = null
 box_style = 3
 speaker = "dad"
 
