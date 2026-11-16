@@ -1,13 +1,11 @@
 extends Area2D
 
-# [speaker:emotion] sets who is talking and which portrait shows.
-# Speaker names must match the portrait filenames (mom_neutral.png, mc_neutral.png...).
 const LINES: Array[String] = [
 	"[mom:neutral] Anak, kain na. Don't stay up so late again, ha?",
 	"[mc:happy] Opo, Ma. I already reviewed for the quiz.",
 ]
 
-const BOX_STYLE := 1   # which dialogue box design (1-4)
+const BOX_STYLE := 1  
 
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
@@ -18,7 +16,7 @@ func _on_body_entered(body: Node2D) -> void:
 	if GameManager.mother_interaction_completed:
 		return
 	body.can_move = false
-	await get_tree().create_timer(0.6).timeout   # let the fade finish first
+	await get_tree().create_timer(0.6).timeout  
 	DialogueManager.start(LINES, BOX_STYLE)
 	await DialogueManager.dialogue_finished
 	body.can_move = true

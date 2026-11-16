@@ -2,6 +2,7 @@ extends Control
 
 
 func _ready() -> void:
+	process_mode = Node.PROCESS_MODE_ALWAYS
 	$Buttons/NewGame.pressed.connect(_start_new_game)
 	$Buttons/Quit.pressed.connect(_quit_game)
 	$Buttons/Credits.pressed.connect(_show_credits)
