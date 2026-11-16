@@ -1,7 +1,5 @@
 extends Area2D
 
-# [speaker:emotion] sets who is talking and which portrait shows.
-# Speaker names must match the portrait filenames (mom_neutral.png, mc_neutral.png...).
 const LINES: Array[String] = [
 	"[mom:neutral] Anak, kain na. Don't stay up so late again, ha?",
 	"[mc:happy] Opo, Ma. I already reviewed for the quiz.",

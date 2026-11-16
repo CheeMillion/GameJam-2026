@@ -27,6 +27,18 @@ size = Vector2(186, 114)
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 52.009613
 
+<<<<<<< HEAD
+=======
+[sub_resource type="CircleShape2D" id="CircleShape2D_rt84g"]
+radius = 90.35486
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
+size = Vector2(1075, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(592.75, 20)
+
+>>>>>>> parent of 575099f (Revert "Added dialogue of teacher")
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
 
@@ -39,7 +51,7 @@ position = Vector2(-2, 0)
 
 [node name="player" parent="." unique_id=1908451884 instance=ExtResource("1_80nbo")]
 y_sort_enabled = true
-position = Vector2(1021, 257)
+position = Vector2(985, 282)
 
 [node name="Dining" parent="." unique_id=74292362 instance=ExtResource("3_fc0e3")]
 
@@ -194,6 +206,43 @@ texture = ExtResource("15_ir15t")
 position = Vector2(-9, 24)
 shape = SubResource("CircleShape2D_xrivr")
 
+<<<<<<< HEAD
+=======
+[node name="DiaCM" type="Area2D" parent="." unique_id=1690263913]
+position = Vector2(-2, 0)
+script = ExtResource("13_kvuet")
+lines = Array[String](["What's up Nerd!"])
+repeat_lines = Array[String](["Get out of my face. "])
+
+[node name="collision" type="CollisionShape2D" parent="DiaCM" unique_id=1928339980]
+position = Vector2(12890, 2635)
+shape = SubResource("CircleShape2D_rt84g")
+
+[node name="DiaCMF" type="Area2D" parent="." unique_id=1471270894]
+position = Vector2(11258, 51)
+script = ExtResource("13_kvuet")
+lines = Array[String](["Want a smoke?"])
+repeat_lines = Array[String](["Hmp!"])
+
+[node name="collision" type="CollisionShape2D" parent="DiaCMF" unique_id=2045630932]
+position = Vector2(692, 1465)
+shape = SubResource("CircleShape2D_rt84g")
+
+[node name="DiaTeacher2" type="Area2D" parent="." unique_id=1663642133]
+position = Vector2(11258, 51)
+script = ExtResource("13_kvuet")
+lines = Array[String](["Take a seat everyone!"])
+repeat_lines = Array[String](["Dont make me say it twice!"])
+
+[node name="collision" type="CollisionShape2D" parent="DiaTeacher2" unique_id=1964958475]
+position = Vector2(1163.5, 2312)
+shape = SubResource("RectangleShape2D_ir15t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiaTeacher2" unique_id=141295785]
+position = Vector2(1132.625, 2114)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+>>>>>>> parent of 575099f (Revert "Added dialogue of teacher")
 [editable path="Dining"]
 [editable path="teleporter"]
 [editable path="teleporter2"]
