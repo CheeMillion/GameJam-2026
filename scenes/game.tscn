@@ -27,6 +27,21 @@ size = Vector2(186, 114)
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 52.009613
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rt84g"]
+radius = 90.35486
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ir15t"]
+size = Vector2(1075, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lfkbx"]
+size = Vector2(592.75, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ynku"]
+size = Vector2(6698, 3296)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxe77"]
+size = Vector2(1441, 1976.5)
+
 [node name="Main" type="Node2D" unique_id=463607009]
 y_sort_enabled = true
 
@@ -193,6 +208,56 @@ texture = ExtResource("15_ir15t")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Daddy" unique_id=448797370]
 position = Vector2(-9, 24)
 shape = SubResource("CircleShape2D_xrivr")
+
+[node name="DiaCM" type="Area2D" parent="." unique_id=1690263913]
+position = Vector2(-2, 0)
+script = ExtResource("13_kvuet")
+lines = Array[String](["What's up Nerd!"])
+repeat_lines = Array[String](["Get out of my face. "])
+
+[node name="collision" type="CollisionShape2D" parent="DiaCM" unique_id=1928339980]
+position = Vector2(12890, 2635)
+shape = SubResource("CircleShape2D_rt84g")
+
+[node name="DiaCMF" type="Area2D" parent="." unique_id=1471270894]
+position = Vector2(11258, 51)
+script = ExtResource("13_kvuet")
+lines = Array[String](["Want a smoke?"])
+repeat_lines = Array[String](["Hmp!"])
+
+[node name="collision" type="CollisionShape2D" parent="DiaCMF" unique_id=2045630932]
+position = Vector2(692, 1465)
+shape = SubResource("CircleShape2D_rt84g")
+
+[node name="DiaTeacher2" type="Area2D" parent="." unique_id=1663642133]
+position = Vector2(11258, 51)
+script = ExtResource("13_kvuet")
+lines = Array[String](["Take a seat everyone!"])
+repeat_lines = Array[String](["Dont make me say it twice!"])
+
+[node name="collision" type="CollisionShape2D" parent="DiaTeacher2" unique_id=1964958475]
+position = Vector2(1163.5, 2312)
+shape = SubResource("RectangleShape2D_ir15t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DiaTeacher2" unique_id=141295785]
+position = Vector2(1132.625, 2114)
+shape = SubResource("RectangleShape2D_lfkbx")
+
+[node name="HomeMusic" type="Area2D" parent="." unique_id=1747046326]
+script = ExtResource("16_ca42v")
+song = "home_good"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeMusic" unique_id=1642167700]
+position = Vector2(2254, 726)
+shape = SubResource("RectangleShape2D_1ynku")
+
+[node name="SchoolMusic" type="Area2D" parent="." unique_id=515478723]
+script = ExtResource("16_ca42v")
+song = "schoolreal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SchoolMusic" unique_id=1105698377]
+position = Vector2(12376.5, 1852)
+shape = SubResource("RectangleShape2D_pxe77")
 
 [editable path="Dining"]
 [editable path="teleporter"]
